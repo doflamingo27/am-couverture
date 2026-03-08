@@ -17,6 +17,24 @@ Site de landing pages pour génération de leads via Meta Ads (Facebook/Instagra
 
 **Zone géographique** : Orléans Métropole et communes environnantes (45)
 
+## Branding & Identité visuelle
+
+- **Logo** : CSS uniquement — carré jaune "AM" + texte "COUVERTURE" (pas de fichier image)
+- **Couleur accent** : Chartreuse atténuée `#B8CC30` (PAS le jaune fluo `#CCFF00`, trop clair pour les yeux)
+- **Fond principal** : Dark navy `#0F172A` (slate-900)
+- **Texte** : Blanc `#FFFFFF`
+- **CTA principal** : Accent `#B8CC30` avec texte noir
+- **CTA secondaire** : Gris/transparent avec bordure blanche
+- **Téléphone** : +33 7 85 96 62 48
+- **Localisation** : Ingré (45)
+- **Nom entreprise** : AM Couverture
+
+### Images disponibles (public/images/)
+- `hero1.jpg` — 2 couvreurs travaillant sur un toit en bardeaux
+- `hero2.jpg` — 2 couvreurs avec harnais sur un toit en tuiles, ciel bleu
+- `hero3.jpg` — 2 couvreurs avec marteau sur toit en bardeaux
+- `roofcleaning1.jpg` — Nettoyage de toiture au jet basse pression
+
 ## Stack technique
 
 - **Framework** : Next.js 14+ (App Router) avec TypeScript
