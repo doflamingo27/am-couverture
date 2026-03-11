@@ -76,7 +76,7 @@ export const config: LandingPageConfig = {
       caption: "Maison à Orléans — Démoussage complet + traitement hydrofuge",
     },
     {
-      before: "/images/demoussage-avant-2.png",
+      before: "/images/demoussage-avant-2.jpg",
       after: "/images/demoussage-apres-2.jpg",
       caption: "Pavillon à Ingré — Nettoyage toiture tuiles terre cuite",
     },
