@@ -132,6 +132,7 @@ async function addToGoogleSheet(data: LeadData) {
     "Email": "",
     "Code Postal": data.postalCode,
     "Type de projet": data.projectType,
+    "Type de bien": data.propertyType,
     "Source (URL)": data.source,
     Statut: "",
     "Notes commercial": "",
