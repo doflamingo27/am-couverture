@@ -22,6 +22,12 @@ export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
     postalCode: "",
   });
   const [loading, setLoading] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
+
+  const validatePhone = (phone: string) => {
+    const cleaned = phone.replace(/[\s.-]/g, "");
+    return /^(\+33|0)[1-9]\d{8}$/.test(cleaned);
+  };
 
   const selectOption = (field: keyof FormData, value: string) => {
     setData((prev) => ({ ...prev, [field]: value }));
@@ -30,6 +36,11 @@ export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validatePhone(data.phone)) {
+      setPhoneError("Numéro invalide (ex: 06 12 34 56 78)");
+      return;
+    }
+    setPhoneError("");
     setLoading(true);
 
     try {
@@ -147,16 +158,22 @@ export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
                   }
                   className="w-full px-5 py-4 rounded-xl bg-slate-800/80 border border-slate-600/50 focus:border-[#B8CC30] focus:ring-1 focus:ring-[#B8CC30]/30 focus:outline-none text-white placeholder-slate-400 transition-all"
                 />
-                <input
-                  type="tel"
-                  placeholder="Téléphone"
-                  required
-                  value={data.phone}
-                  onChange={(e) =>
-                    setData((prev) => ({ ...prev, phone: e.target.value }))
-                  }
-                  className="w-full px-5 py-4 rounded-xl bg-slate-800/80 border border-slate-600/50 focus:border-[#B8CC30] focus:ring-1 focus:ring-[#B8CC30]/30 focus:outline-none text-white placeholder-slate-400 transition-all"
-                />
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Téléphone mobile (ex: 06 12 34 56 78)"
+                    required
+                    value={data.phone}
+                    onChange={(e) => {
+                      setData((prev) => ({ ...prev, phone: e.target.value }));
+                      if (phoneError) setPhoneError("");
+                    }}
+                    className={`w-full px-5 py-4 rounded-xl bg-slate-800/80 border focus:ring-1 focus:outline-none text-white placeholder-slate-400 transition-all ${phoneError ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-slate-600/50 focus:border-[#B8CC30] focus:ring-[#B8CC30]/30"}`}
+                  />
+                  {phoneError && (
+                    <p className="text-red-400 text-xs mt-1.5">{phoneError}</p>
+                  )}
+                </div>
                 <input
                   type="text"
                   placeholder="Code postal"
