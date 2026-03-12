@@ -10,7 +10,7 @@ export const config: LandingPageConfig = {
     badge: "AM COUVERTURE — INGRÉ (45)",
     title: "Retrouvez une toiture propre et protégée pour les 10 prochaines années",
     subtitle:
-      "Démoussage professionnel sans Karcher. Artisan local certifié, assurance décennale. Devis gratuit sous 24h.",
+      "Démoussage professionnel par un artisan local certifié, assurance décennale. Devis gratuit sous 24h.",
     backgroundImage: "/images/roofcleaning1.jpg",
   },
   trustBadges: [
