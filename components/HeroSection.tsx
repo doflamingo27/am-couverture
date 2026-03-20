@@ -1,10 +1,24 @@
 "use client";
 
+import { Suspense } from "react";
 import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import { PHONE, PHONE_DISPLAY } from "@/lib/constants";
 import type { LandingPageConfig } from "@/lib/types";
+
+function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<string, string> }) {
+  const searchParams = useSearchParams();
+  const utmContent = searchParams.get("utm_content");
+  const displayTitle = (utmContent && dynamicH1?.[utmContent]) || title;
+
+  return (
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-6">
+      {displayTitle}
+    </h1>
+  );
+}
 
 export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
   return (
@@ -42,9 +56,15 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
             </span>
           </div>
         )}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-6">
-          {hero.title}
-        </h1>
+        <Suspense
+          fallback={
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-6">
+              {hero.title}
+            </h1>
+          }
+        >
+          <DynamicH1 title={hero.title} dynamicH1={hero.dynamicH1} />
+        </Suspense>
         <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
           {hero.subtitle}
         </p>

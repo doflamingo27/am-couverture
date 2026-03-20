@@ -9,6 +9,7 @@ export type LandingPageConfig = {
     title: string;
     subtitle: string;
     backgroundImage: string;
+    dynamicH1?: Record<string, string>;
   };
   trustBadges: Array<{
     icon: string;

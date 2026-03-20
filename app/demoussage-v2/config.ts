@@ -13,6 +13,9 @@ export const config: LandingPageConfig = {
     subtitle:
       "Chaque mois sans entretien rapproche votre toiture d'une rénovation complète. Agissez maintenant, diagnostic gratuit.",
     backgroundImage: "/images/hero1.jpg",
+    dynamicH1: {
+      "p5-degats": "Votre toit cache des dégâts — Vérification gratuite",
+    },
   },
   trustBadges: [
     { icon: "Clock", text: "Diagnostic gratuit en 24h" },

@@ -12,6 +12,12 @@ export const config: LandingPageConfig = {
     subtitle:
       "Démoussage professionnel par un artisan local certifié, assurance décennale. Devis gratuit sous 24h.",
     backgroundImage: "/images/roofcleaning1.jpg",
+    dynamicH1: {
+      "p1-transformation": "Votre toiture retrouve son éclat — Devis gratuit en 24h",
+      "p2-diagnostic": "Diagnostic toiture GRATUIT — On monte, on vous dit tout",
+      "p3-comparatif": "Protégez votre toit pour 10-20x moins cher qu'une rénovation",
+      "p4-bouclier": "Votre toit propre ET protégé pour 5-10 ans",
+    },
   },
   trustBadges: [
     { icon: "Clock", text: "Devis gratuit en 24h" },
