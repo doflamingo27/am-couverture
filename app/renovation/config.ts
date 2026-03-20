@@ -86,6 +86,11 @@ export const config: LandingPageConfig = {
       after: "/images/renovation-apres-2.jpg",
       caption: "Pavillon à Fleury-les-Aubrais — Remplacement toiture + zinguerie",
     },
+    {
+      before: "/images/renovation-avant-3.jpg",
+      after: "/images/renovation-apres-3.jpg",
+      caption: "Pavillon dans le Loiret (45) — Réfection complète couverture + zinguerie",
+    },
   ],
   testimonials: {
     average: 4.9,

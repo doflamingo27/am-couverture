@@ -121,7 +121,8 @@ export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
               >
                 <ArrowLeft size={14} /> Retour
               </button>
-              <h3 className="text-lg sm:text-xl font-bold mb-6">{form.step2Label}</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">{form.step2Label}</h3>
+              <p className="text-xs text-[#B8CC30] font-medium mb-6">Dernière étape avant vos coordonnées</p>
               <div className="grid gap-3">
                 {form.step2Options.map((opt) => (
                   <button
