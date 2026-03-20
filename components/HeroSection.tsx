@@ -14,7 +14,7 @@ function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<str
   const displayTitle = (utmContent && dynamicH1?.[utmContent]) || title;
 
   return (
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-6">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-4 md:mb-6">
       {displayTitle}
     </h1>
   );
@@ -22,17 +22,17 @@ function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<str
 
 export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex flex-col overflow-hidden">
+    <section className="relative flex flex-col overflow-hidden">
       {/* Background image */}
       <Image
         src={hero.backgroundImage}
         alt="Couvreur au travail"
         fill
-        className="object-cover scale-105 object-[center_30%] md:object-center"
+        className="object-cover object-[25%_20%] md:object-center md:scale-105"
         priority
       />
       {/* Multi-layer overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/80 via-black/50 to-[#0F172A]/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/60 via-black/40 to-[#0F172A]/85 md:from-[#0F172A]/80 md:via-black/50 md:to-[#0F172A]/90" />
 
       {/* Header */}
       <header className="relative z-10 flex items-center justify-between px-6 lg:px-12 py-5">
@@ -47,9 +47,9 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
       </header>
 
       {/* Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pb-28 sm:pb-24">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-10 md:py-0 pb-20 sm:pb-24 min-h-[60vh] md:min-h-[calc(100vh-80px)]">
         {hero.badge && (
-          <div className="inline-flex items-center gap-2 bg-[#B8CC30]/15 backdrop-blur-sm border border-[#B8CC30]/30 rounded-full px-5 py-2 mb-8">
+          <div className="inline-flex items-center gap-2 bg-[#B8CC30]/15 backdrop-blur-sm border border-[#B8CC30]/30 rounded-full px-5 py-2 mb-5 md:mb-8">
             <span className="w-2 h-2 rounded-full bg-[#B8CC30] animate-pulse" />
             <span className="text-[#B8CC30] text-xs sm:text-sm font-semibold tracking-wider uppercase">
               {hero.badge}
@@ -58,14 +58,14 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
         )}
         <Suspense
           fallback={
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-4 md:mb-6">
               {hero.title}
             </h1>
           }
         >
           <DynamicH1 title={hero.title} dynamicH1={hero.dynamicH1} />
         </Suspense>
-        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-6 md:mb-10 leading-relaxed">
           {hero.subtitle}
         </p>
 
