@@ -12,7 +12,7 @@ export const config: LandingPageConfig = {
     title: "La mousse sur votre toit ? Elle cause bien plus de dégâts que vous ne le pensez",
     subtitle:
       "Chaque mois sans entretien rapproche votre toiture d'une rénovation complète. Agissez maintenant, diagnostic gratuit.",
-    backgroundImage: "/images/hero1.jpg",
+    backgroundImage: "/images/roofcleaning1.jpg",
     dynamicH1: {
       "p5-degats": "Votre toit cache des dégâts — Vérification gratuite",
     },
