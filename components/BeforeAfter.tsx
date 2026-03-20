@@ -28,16 +28,16 @@ export function BeforeAfter({
   items: LandingPageConfig["beforeAfter"];
 }) {
   return (
-    <section className="py-14 sm:py-20 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-14 sm:py-20 px-3 sm:px-6">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-2xl sm:text-3xl font-bold">Avant / Après</h2>
           <div className="w-16 h-1 bg-[#B8CC30] rounded-full mx-auto mt-4" />
         </div>
         <div className="grid gap-8 sm:gap-10 md:grid-cols-2">
           {items.map((item, i) => (
-            <div key={i} className={`bg-slate-800/30 border border-slate-700/30 rounded-2xl p-4 sm:p-5${items.length % 2 === 1 && i === items.length - 1 ? " md:col-span-2 md:max-w-[calc(50%-20px)] md:mx-auto" : ""}`}>
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div key={i} className={`bg-slate-800/30 border border-slate-700/30 rounded-2xl p-2.5 sm:p-5${items.length % 2 === 1 && i === items.length - 1 ? " md:col-span-2 md:max-w-[calc(50%-20px)] md:mx-auto" : ""}`}>
+              <div className="grid grid-cols-2 gap-2 sm:gap-4">
                 <ImageOrPlaceholder src={item.before} label="AVANT" />
                 <ImageOrPlaceholder src={item.after} label="APRÈS" />
               </div>
