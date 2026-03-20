@@ -51,7 +51,7 @@ function renderTitle(title: string, highlightWord?: string) {
 
 export function Services({ data }: { data: LandingPageConfig["services"] }) {
   return (
-    <section className="py-14 sm:py-20 px-6 bg-[#1E293B]/60">
+    <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#1E293B]/60">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           {data.badge && (
@@ -67,17 +67,17 @@ export function Services({ data }: { data: LandingPageConfig["services"] }) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {data.items.map((item, i) => {
             const Icon = ICONS[item.icon] || Zap;
             return (
               <div
                 key={i}
-                className="group relative bg-white/[0.04] border border-slate-700/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:border-slate-600/50 hover:shadow-lg hover:shadow-black/20 overflow-hidden"
+                className="group relative bg-white/[0.04] border border-slate-700/30 rounded-2xl p-6 text-center sm:text-left transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:border-slate-600/50 hover:shadow-lg hover:shadow-black/20 overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#B8CC30] to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <div className="w-12 h-12 rounded-xl bg-[#B8CC30]/10 border border-[#B8CC30]/20 flex items-center justify-center mb-4 group-hover:bg-[#B8CC30]/15 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-[#B8CC30]/10 border border-[#B8CC30]/20 flex items-center justify-center mb-4 mx-auto sm:mx-0 group-hover:bg-[#B8CC30]/15 transition-colors duration-300">
                   <Icon size={22} className="text-[#B8CC30]" />
                 </div>
 

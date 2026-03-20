@@ -22,13 +22,13 @@ function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<str
 
 export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
+    <section className="relative min-h-[85vh] md:min-h-screen flex flex-col overflow-hidden">
       {/* Background image */}
       <Image
         src={hero.backgroundImage}
         alt="Couvreur au travail"
         fill
-        className="object-cover scale-105"
+        className="object-cover scale-105 object-[center_30%] md:object-center"
         priority
       />
       {/* Multi-layer overlay for depth */}
