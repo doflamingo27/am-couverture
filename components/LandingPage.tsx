@@ -1,4 +1,4 @@
-import { StickyPhoneBar } from "@/components/StickyPhoneBar";
+// import { StickyPhoneBar } from "@/components/StickyPhoneBar"; // Désactivé — traçabilité leads via formulaire uniquement
 import { HeroSection } from "@/components/HeroSection";
 import { TrustBadges } from "@/components/TrustBadges";
 import { LeadForm } from "@/components/LeadForm";
@@ -14,7 +14,7 @@ import type { LandingPageConfig } from "@/lib/types";
 export function LandingPage({ config }: { config: LandingPageConfig }) {
   return (
     <>
-      <StickyPhoneBar />
+      {/* <StickyPhoneBar /> — Désactivé pour traçabilité leads */}
       <HeroSection hero={config.hero} />
       <TrustBadges badges={config.trustBadges} />
       <LeadForm form={config.form} />

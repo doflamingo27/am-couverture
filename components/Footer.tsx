@@ -1,6 +1,6 @@
-import { Phone, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { PHONE, PHONE_DISPLAY, COMPANY_NAME, CITIES_MAIN, CITIES_EXTENDED } from "@/lib/constants";
+import { COMPANY_NAME, CITIES_MAIN, CITIES_EXTENDED } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -11,13 +11,6 @@ export function Footer() {
           <div>
             <Logo size="sm" />
             <p className="text-slate-400 text-sm mt-3">{COMPANY_NAME}</p>
-            <a
-              href={`tel:${PHONE}`}
-              className="inline-flex items-center gap-2 text-[#B8CC30] font-semibold mt-4 hover:underline"
-            >
-              <Phone size={16} />
-              {PHONE_DISPLAY}
-            </a>
           </div>
 
           {/* Zone d'intervention principale */}

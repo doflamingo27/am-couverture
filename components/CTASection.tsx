@@ -1,7 +1,6 @@
 "use client";
 
-import { ArrowRight, Phone } from "lucide-react";
-import { PHONE } from "@/lib/constants";
+import { ArrowRight } from "lucide-react";
 import type { LandingPageConfig } from "@/lib/types";
 
 export function CTASection({ data }: { data: LandingPageConfig["ctaFinal"] }) {
@@ -27,13 +26,6 @@ export function CTASection({ data }: { data: LandingPageConfig["ctaFinal"] }) {
             {data.ctaText}
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <a
-            href={`tel:${PHONE}`}
-            className="inline-flex items-center gap-2 text-[#B8CC30] font-semibold hover:underline"
-          >
-            <Phone size={18} />
-            ou appelez-nous
-          </a>
         </div>
 
         <p className="text-slate-400 text-sm mt-5">{data.reassurance}</p>

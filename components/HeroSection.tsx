@@ -2,10 +2,9 @@
 
 import { Suspense } from "react";
 import Image from "next/image";
-import { Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Logo } from "@/components/Logo";
-import { PHONE, PHONE_DISPLAY } from "@/lib/constants";
 import type { LandingPageConfig } from "@/lib/types";
 
 function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<string, string> }) {
@@ -37,13 +36,6 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
       {/* Header */}
       <header className="relative z-10 flex items-center justify-between px-5 md:px-6 lg:px-12 py-4 md:py-5">
         <Logo />
-        <a
-          href={`tel:${PHONE}`}
-          className="hidden md:flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-[#B8CC30] hover:text-black hover:border-[#B8CC30] transition-all duration-300"
-        >
-          <Phone size={16} />
-          {PHONE_DISPLAY}
-        </a>
       </header>
 
       {/* Content */}
@@ -71,21 +63,13 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full max-w-md sm:max-w-none sm:justify-center">
-          <a
-            href={`tel:${PHONE}`}
-            className="group flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.3)] transition-all duration-300"
-          >
-            <Phone size={18} className="sm:hidden" />
-            <Phone size={20} className="hidden sm:block" />
-            Appeler maintenant
-          </a>
           <button
             onClick={() =>
               document
                 .getElementById("formulaire")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="group flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-white/20 transition-all duration-300"
+            className="group flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.3)] transition-all duration-300"
           >
             Demander un devis
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:hidden" />

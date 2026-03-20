@@ -12,7 +12,6 @@ import {
   CloudRain,
 } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { PHONE, PHONE_DISPLAY } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Merci ! — AM Couverture",
@@ -36,13 +35,9 @@ export default function MerciPage() {
           de votre projet et planifier une visite.
         </p>
 
-        <a
-          href={`tel:${PHONE}`}
-          className="inline-flex items-center gap-2 bg-[#B8CC30] text-black font-semibold px-8 py-4 rounded-xl text-lg hover:bg-[#a8bc20] transition-colors"
-        >
-          <Phone size={20} />
-          En cas d&apos;urgence : {PHONE_DISPLAY}
-        </a>
+        <p className="text-[#B8CC30] font-semibold text-lg">
+          Un conseiller vous rappelle sous 2h aux heures ouvrées.
+        </p>
       </div>
 
       {/* Roadmap 3 étapes */}
