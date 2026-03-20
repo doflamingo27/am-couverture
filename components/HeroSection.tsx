@@ -14,7 +14,7 @@ function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<str
   const displayTitle = (utmContent && dynamicH1?.[utmContent]) || title;
 
   return (
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-4 md:mb-6">
+    <h1 className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-3 md:mb-6">
       {displayTitle}
     </h1>
   );
@@ -35,7 +35,7 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/60 via-black/40 to-[#0F172A]/85 md:from-[#0F172A]/80 md:via-black/50 md:to-[#0F172A]/90" />
 
       {/* Header */}
-      <header className="relative z-10 flex items-center justify-between px-6 lg:px-12 py-5">
+      <header className="relative z-10 flex items-center justify-between px-5 md:px-6 lg:px-12 py-4 md:py-5">
         <Logo />
         <a
           href={`tel:${PHONE}`}
@@ -47,35 +47,36 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
       </header>
 
       {/* Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-10 md:py-0 pb-20 sm:pb-24 min-h-[60vh] md:min-h-[calc(100vh-80px)]">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 md:px-6 py-8 md:py-0 pb-16 sm:pb-24 min-h-[60vh] md:min-h-[calc(100vh-80px)]">
         {hero.badge && (
-          <div className="inline-flex items-center gap-2 bg-[#B8CC30]/15 backdrop-blur-sm border border-[#B8CC30]/30 rounded-full px-5 py-2 mb-5 md:mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#B8CC30] animate-pulse" />
-            <span className="text-[#B8CC30] text-xs sm:text-sm font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-[#B8CC30]/15 backdrop-blur-sm border border-[#B8CC30]/30 rounded-full px-4 md:px-5 py-1.5 md:py-2 mb-4 md:mb-8">
+            <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#B8CC30] animate-pulse" />
+            <span className="text-[#B8CC30] text-[0.65rem] sm:text-sm font-semibold tracking-wider uppercase">
               {hero.badge}
             </span>
           </div>
         )}
         <Suspense
           fallback={
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-4 md:mb-6">
+            <h1 className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-[1.1] mb-3 md:mb-6">
               {hero.title}
             </h1>
           }
         >
           <DynamicH1 title={hero.title} dynamicH1={hero.dynamicH1} />
         </Suspense>
-        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-6 md:mb-10 leading-relaxed">
+        <p className="text-sm sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-5 md:mb-10 leading-relaxed">
           {hero.subtitle}
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md sm:max-w-none sm:justify-center">
+        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full max-w-md sm:max-w-none sm:justify-center">
           <a
             href={`tel:${PHONE}`}
-            className="group flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold px-7 sm:px-8 py-4 rounded-full text-base sm:text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.3)] transition-all duration-300"
+            className="group flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.3)] transition-all duration-300"
           >
-            <Phone size={20} />
+            <Phone size={18} className="sm:hidden" />
+            <Phone size={20} className="hidden sm:block" />
             Appeler maintenant
           </a>
           <button
@@ -84,10 +85,11 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
                 .getElementById("formulaire")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="group flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-7 sm:px-8 py-4 rounded-full text-base sm:text-lg hover:bg-white/20 transition-all duration-300"
+            className="group flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-white/20 transition-all duration-300"
           >
             Demander un devis
-            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:hidden" />
+            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform hidden sm:block" />
           </button>
         </div>
       </div>
