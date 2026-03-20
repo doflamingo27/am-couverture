@@ -153,6 +153,6 @@ export const config: LandingPageConfig = {
     title: "Votre toiture mérite d'être entre de bonnes mains",
     subtitle: "Devis détaillé gratuit — Artisan certifié dans le Loiret",
     ctaText: "Demander mon devis gratuit",
-    reassurance: "Rappel sous 2h • Devis gratuit • Sans engagement",
+    reassurance: "Rappel sous 2h • Sans engagement • 100% gratuit",
   },
 };
