@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { COMPANY_NAME, CITIES_MAIN, CITIES_EXTENDED } from "@/lib/constants";
@@ -37,7 +38,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-slate-800 text-slate-500 text-xs text-center">
-          © {new Date().getFullYear()} {COMPANY_NAME} — Tous droits réservés — Mentions légales
+          © {new Date().getFullYear()} {COMPANY_NAME} — Tous droits réservés — <Link href="/mentions-legales" className="hover:text-slate-300 underline underline-offset-2">Mentions légales</Link>
         </div>
       </div>
     </footer>
