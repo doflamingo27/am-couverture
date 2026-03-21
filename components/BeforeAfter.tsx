@@ -14,7 +14,7 @@ function ImageOrPlaceholder({ src, label }: { src: string | null; label: string 
   }
   return (
     <div className="relative aspect-[4/3] rounded-xl overflow-hidden group">
-      <Image src={src} alt={label} fill className="object-cover object-center" />
+      <Image src={src} alt={label} fill quality={90} sizes="(max-width: 768px) 45vw, 280px" className="object-cover object-center" />
       <span className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-md">
         {label}
       </span>
