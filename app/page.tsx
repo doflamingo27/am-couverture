@@ -10,36 +10,37 @@ export default function Home() {
       <p className="text-slate-400 mt-3 text-lg">Couvreur · Loiret (45)</p>
 
       {/* Service buttons */}
-      <div className="mt-12 w-full max-w-md space-y-4">
-        <Link
-          href="/demoussage"
-          className="block w-full bg-[#B8CC30] text-black rounded-2xl p-6 hover:brightness-110 transition"
-        >
-          <div className="flex items-center gap-4">
-            <Sparkles size={28} strokeWidth={2} />
-            <div>
-              <div className="text-xl font-bold">Démoussage &amp; Nettoyage</div>
-              <div className="text-sm opacity-75 mt-1">
-                Nettoyage + traitement hydrofuge de votre toiture
-              </div>
-            </div>
-          </div>
-        </Link>
+      <div className="mt-12 w-full max-w-2xl">
+        <h1 className="text-2xl font-bold text-white text-center">
+          Vous souhaitez :
+        </h1>
+        <p className="text-slate-400 text-center mt-2 mb-8">
+          Sélectionnez la prestation qui vous intéresse
+        </p>
 
-        <Link
-          href="/renovation"
-          className="block w-full bg-white text-black rounded-2xl p-6 hover:brightness-95 transition"
-        >
-          <div className="flex items-center gap-4">
-            <Hammer size={28} strokeWidth={2} />
-            <div>
-              <div className="text-xl font-bold">Rénovation Toiture</div>
-              <div className="text-sm opacity-75 mt-1">
-                Couverture neuve complète, garanti 10 ans
-              </div>
+        <div className="grid grid-cols-2 gap-4">
+          <Link
+            href="/demoussage"
+            className="bg-[#B8CC30] text-black rounded-2xl p-6 hover:brightness-110 transition flex flex-col items-center text-center"
+          >
+            <Sparkles size={32} strokeWidth={2} className="mb-4" />
+            <div className="text-lg font-bold">Démoussage &amp; Nettoyage</div>
+            <div className="text-sm opacity-75 mt-2">
+              Nettoyage + traitement hydrofuge de votre toiture
             </div>
-          </div>
-        </Link>
+          </Link>
+
+          <Link
+            href="/renovation"
+            className="bg-white text-black rounded-2xl p-6 hover:brightness-95 transition flex flex-col items-center text-center"
+          >
+            <Hammer size={32} strokeWidth={2} className="mb-4" />
+            <div className="text-lg font-bold">Rénovation Toiture</div>
+            <div className="text-sm opacity-75 mt-2">
+              Couverture neuve complète, garanti 10 ans
+            </div>
+          </Link>
+        </div>
       </div>
 
       {/* Trust badges */}
