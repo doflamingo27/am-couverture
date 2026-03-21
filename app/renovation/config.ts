@@ -79,17 +79,12 @@ export const config: LandingPageConfig = {
     {
       before: "/images/renovation-avant-1.jpg",
       after: "/images/renovation-apres-1.jpg",
-      caption: "Maison à Orléans — Rénovation complète couverture tuiles",
+      caption: "Pavillon à Fleury-les-Aubrais — Rénovation complète couverture tuiles",
     },
     {
       before: "/images/renovation-avant-2.jpg",
       after: "/images/renovation-apres-2.jpg",
-      caption: "Pavillon à Fleury-les-Aubrais — Remplacement toiture + zinguerie",
-    },
-    {
-      before: "/images/renovation-avant-3.jpg",
-      after: "/images/renovation-apres-3.jpg",
-      caption: "Pavillon dans le Loiret (45) — Réfection complète couverture + zinguerie",
+      caption: "Maison à Ingré — Réfection toiture + zinguerie",
     },
   ],
   testimonials: {
