@@ -86,11 +86,6 @@ export const config: LandingPageConfig = {
       after: "/images/demoussage-apres-2.jpg",
       caption: "Pavillon à Ingré — Nettoyage toiture tuiles terre cuite",
     },
-    {
-      before: "/images/demoussage-avant-3.jpg",
-      after: "/images/demoussage-apres-3.jpg",
-      caption: "Maison à Fleury-les-Aubrais — Démoussage + nettoyage gouttières",
-    },
   ],
   testimonials: {
     average: 4.9,
