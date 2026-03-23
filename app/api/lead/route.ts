@@ -114,6 +114,7 @@ async function sendNotificationEmail(data: LeadData) {
 
 async function sendOwnerNotificationEmail(data: LeadData) {
   const apiKey = process.env.RESEND_API_KEY;
+  console.log("Owner notification: starting, apiKey exists:", !!apiKey);
   if (!apiKey) return;
 
   const { Resend } = await import("resend");
@@ -127,7 +128,7 @@ async function sendOwnerNotificationEmail(data: LeadData) {
     // ignore
   }
 
-  await resend.emails.send({
+  const result = await resend.emails.send({
     from: "AM Couverture <notifications@am-couverture.net>",
     to: ["footballmindset.hs@gmail.com"],
     subject: `🔔 Nouveau lead — ${data.projectType} — ${data.postalCode}`,
@@ -143,6 +144,7 @@ UTM content : ${utmContent}
 
 → Rappeler sous 2h !`,
   });
+  console.log("Owner notification: Resend response", JSON.stringify(result));
 }
 
 async function addToGoogleSheet(data: LeadData) {
