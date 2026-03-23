@@ -128,7 +128,7 @@ async function sendOwnerNotificationEmail(data: LeadData) {
   }
 
   await resend.emails.send({
-    from: "Leads AM Couverture <noreply@resend.dev>",
+    from: "AM Couverture <notifications@am-couverture.net>",
     to: ["footballmindset.hs@gmail.com"],
     subject: `🔔 Nouveau lead — ${data.projectType} — ${data.postalCode}`,
     text: `Nouveau lead reçu !
