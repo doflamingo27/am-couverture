@@ -41,6 +41,7 @@ export async function POST(request: Request) {
     const results = await Promise.allSettled([
       sendConfirmationEmail(data),
       sendNotificationEmail(data),
+      sendOwnerNotificationEmail(data),
       addToGoogleSheet(data),
       sendMetaCAPI(data, request),
     ]);
@@ -48,7 +49,7 @@ export async function POST(request: Request) {
     // Log any failures (don't block the response)
     results.forEach((result, i) => {
       if (result.status === "rejected") {
-        const names = ["confirmation email", "notification email", "google sheet", "meta capi"];
+        const names = ["confirmation email", "notification email", "owner notification", "google sheet", "meta capi"];
         console.error(`Failed: ${names[i]}`, result.reason);
       }
     });
@@ -108,6 +109,39 @@ async function sendNotificationEmail(data: LeadData) {
         <tr><td><strong>Date</strong></td><td>${new Date().toLocaleString("fr-FR")}</td></tr>
       </table>
     `,
+  });
+}
+
+async function sendOwnerNotificationEmail(data: LeadData) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return;
+
+  const { Resend } = await import("resend");
+  const resend = new Resend(apiKey);
+
+  let utmContent = "";
+  try {
+    const url = new URL(data.source, "https://placeholder.com");
+    utmContent = url.searchParams.get("utm_content") || "";
+  } catch {
+    // ignore
+  }
+
+  await resend.emails.send({
+    from: "Leads AM Couverture <noreply@resend.dev>",
+    to: ["footballmindset.hs@gmail.com"],
+    subject: `🔔 Nouveau lead — ${data.projectType} — ${data.postalCode}`,
+    text: `Nouveau lead reçu !
+
+Prénom : ${data.firstName}
+Téléphone : ${data.phone}
+Code postal : ${data.postalCode}
+Besoin : ${data.projectType}
+Type de bien : ${data.propertyType}
+Source : ${data.source}
+UTM content : ${utmContent}
+
+→ Rappeler sous 2h !`,
   });
 }
 
