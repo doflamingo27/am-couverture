@@ -128,11 +128,12 @@ async function sendOwnerNotificationEmail(data: LeadData) {
     // ignore
   }
 
-  const result = await resend.emails.send({
-    from: "AM Couverture <notifications@am-couverture.net>",
-    to: ["footballmindset.hs@gmail.com"],
-    subject: `🔔 Nouveau lead — ${data.projectType} — ${data.postalCode}`,
-    text: `Nouveau lead reçu !
+  try {
+    const result = await resend.emails.send({
+      from: "AM Couverture <notifications@am-couverture.net>",
+      to: ["footballmindset.hs@gmail.com"],
+      subject: `🔔 Nouveau lead — ${data.projectType} — ${data.postalCode}`,
+      text: `Nouveau lead reçu !
 
 Prénom : ${data.firstName}
 Téléphone : ${data.phone}
@@ -143,8 +144,13 @@ Source : ${data.source}
 UTM content : ${utmContent}
 
 → Rappeler sous 2h !`,
-  });
-  console.log("Owner notification: Resend response", JSON.stringify(result));
+    });
+    console.log("Owner notification OK:", JSON.stringify(result));
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : JSON.stringify(err);
+    console.log("Owner notification ERROR:", message);
+    throw err;
+  }
 }
 
 async function addToGoogleSheet(data: LeadData) {
