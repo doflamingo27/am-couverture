@@ -44,18 +44,30 @@ export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
     setLoading(true);
 
     try {
+      // Generate unique event ID for Meta deduplication (Pixel + CAPI)
+      const eventId = `lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+      // Read Facebook cookies for CAPI matching
+      const getCookie = (name: string) => {
+        const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+        return match ? decodeURIComponent(match[1]) : "";
+      };
+
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...data,
-          source: window.location.pathname,
+          source: window.location.href,
+          eventId,
+          fbc: getCookie("_fbc"),
+          fbp: getCookie("_fbp"),
         }),
       });
 
       if (res.ok) {
         if (typeof window !== "undefined" && typeof window.fbq === "function") {
-          window.fbq("track", "Lead");
+          window.fbq("track", "Lead", {}, { eventID: eventId });
         }
         window.location.href = "/merci";
       }

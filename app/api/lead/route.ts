@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { createHash } from "crypto";
+
 type LeadData = {
   firstName: string;
   phone: string;
@@ -7,6 +9,9 @@ type LeadData = {
   projectType: string;
   propertyType: string;
   source: string;
+  eventId: string;
+  fbc: string;
+  fbp: string;
 };
 
 function validatePhone(phone: string): boolean {
@@ -37,7 +42,7 @@ export async function POST(request: Request) {
       sendConfirmationEmail(data),
       sendNotificationEmail(data),
       addToGoogleSheet(data),
-      sendMetaCAPI(data),
+      sendMetaCAPI(data, request),
     ]);
 
     // Log any failures (don't block the response)
@@ -124,6 +129,21 @@ async function addToGoogleSheet(data: LeadData) {
   const doc = new GoogleSpreadsheet(sheetId, auth);
   await doc.loadInfo();
 
+  // Parse UTM parameters from source URL
+  let utmSource = "";
+  let utmMedium = "";
+  let utmCampaign = "";
+  let utmContent = "";
+  try {
+    const url = new URL(data.source, "https://placeholder.com");
+    utmSource = url.searchParams.get("utm_source") || "";
+    utmMedium = url.searchParams.get("utm_medium") || "";
+    utmCampaign = url.searchParams.get("utm_campaign") || "";
+    utmContent = url.searchParams.get("utm_content") || "";
+  } catch {
+    // If URL parsing fails, leave UTM fields empty
+  }
+
   const sheet = doc.sheetsByIndex[0];
   await sheet.addRow({
     Date: new Date().toLocaleString("fr-FR"),
@@ -134,15 +154,26 @@ async function addToGoogleSheet(data: LeadData) {
     "Type de projet": data.projectType,
     "Type de bien": data.propertyType,
     "Source (URL)": data.source,
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_campaign: utmCampaign,
+    utm_content: utmContent,
     Statut: "",
     "Notes commercial": "",
   });
 }
 
-async function sendMetaCAPI(data: LeadData) {
+function sha256(value: string): string {
+  return createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
+
+async function sendMetaCAPI(data: LeadData, request: Request) {
   const pixelId = process.env.META_PIXEL_ID;
   const token = process.env.META_CAPI_TOKEN;
   if (!pixelId || !token) return;
+
+  // Normalize phone: remove spaces/dots/dashes, ensure +33 prefix
+  const cleanPhone = data.phone.replace(/[\s.-]/g, "").replace(/^0/, "+33");
 
   await fetch(
     `https://graph.facebook.com/v18.0/${pixelId}/events`,
@@ -153,12 +184,18 @@ async function sendMetaCAPI(data: LeadData) {
         data: [
           {
             event_name: "Lead",
+            event_id: data.eventId,
             event_time: Math.floor(Date.now() / 1000),
             action_source: "website",
+            event_source_url: data.source,
             user_data: {
-              ph: [data.phone],
-              fn: [data.firstName.toLowerCase()],
-              zp: [data.postalCode],
+              ph: [sha256(cleanPhone)],
+              fn: [sha256(data.firstName)],
+              zp: [sha256(data.postalCode)],
+              client_ip_address: request.headers.get("x-forwarded-for")?.split(",")[0] || "",
+              client_user_agent: request.headers.get("user-agent") || "",
+              fbc: data.fbc || undefined,
+              fbp: data.fbp || undefined,
             },
           },
         ],
