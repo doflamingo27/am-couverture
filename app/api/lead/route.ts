@@ -190,7 +190,7 @@ async function addToGoogleSheet(data: LeadData) {
   await sheet.addRow({
     Date: new Date().toLocaleString("fr-FR"),
     "Prénom": data.firstName,
-    "Téléphone": data.phone,
+    "Téléphone": "'" + data.phone,
     "Email": "",
     "Code Postal": data.postalCode,
     "Type de projet": data.projectType,
