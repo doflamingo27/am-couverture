@@ -20,7 +20,7 @@ export default function Home() {
 
         <div className="grid grid-cols-2 gap-4">
           <Link
-            href="/demoussage"
+            href="/promo-printemps"
             className="bg-[#B8CC30] text-black rounded-2xl p-6 hover:brightness-110 transition flex flex-col items-center text-center"
           >
             <Sparkles size={32} strokeWidth={2} className="mb-4" />
