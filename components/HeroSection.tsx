@@ -74,7 +74,7 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
 
         {/* Stats cards */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-5 md:mb-8">
-          <span className="bg-blue-500/10 border border-blue-500/20 text-blue-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">15+ ans d&apos;expérience</span>
+          <span className="bg-blue-500/10 border border-blue-500/20 text-blue-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">4+ ans d&apos;expérience</span>
           <span className="bg-green-500/10 border border-green-500/20 text-green-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">200+ toitures traitées</span>
           <span className="bg-orange-500/10 border border-orange-500/20 text-orange-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">100% garantie décennale</span>
         </div>
