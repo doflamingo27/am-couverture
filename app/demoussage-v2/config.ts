@@ -14,7 +14,7 @@ export const config: LandingPageConfig = {
       "Chaque mois sans entretien rapproche votre toiture d'une rénovation complète. Agissez maintenant, diagnostic gratuit.",
     backgroundImage: "/images/roofcleaning1.jpg",
     dynamicH1: {
-      "p5-degats": "Votre toit cache des dégâts — Vérification gratuite",
+      "p5-degats": "La mousse sur votre toit cause des dégâts que vous ne voyez pas encore",
     },
   },
   trustBadges: [

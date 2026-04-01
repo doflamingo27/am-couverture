@@ -13,10 +13,11 @@ export const config: LandingPageConfig = {
       "Rénovation complète de couverture. Artisan certifié, assurance décennale. Devis détaillé gratuit sous 24h.",
     backgroundImage: "/images/hero2.jpg",
     dynamicH1: {
-      "p6-cle-en-main": "Rénovation toiture complète — On gère tout de A à Z",
-      "p7-patrimoine": "Protégez 15% de la valeur de votre maison",
-      "p8-reprend-vie": "Votre maison reprend 10 ans de vie",
-      "p9-transformation-reno": "Toit neuf garanti 10 ans — Transformation complète",
+      "c2-maison-retrouve-vie": "Rénovation toiture complète — Votre maison retrouve 10 ans de vie",
+      "p6-cle-en-main": "Rénovation toiture clé en main — On gère tout du début à la fin",
+      "p7-patrimoine": "Protégez 15% de la valeur de votre maison — Rénovation garantie 10 ans",
+      "p8-reprend-vie": "Cette maison dans le Loiret prenait l'eau — Voici ce qu'on a fait",
+      "p9-transformation-reno": "Même maison. Toit neuf. Transformation totale.",
     },
   },
   trustBadges: [

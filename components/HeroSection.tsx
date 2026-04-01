@@ -2,7 +2,7 @@
 
 import { Suspense } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star, Check } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { LandingPageConfig } from "@/lib/types";
@@ -40,6 +40,17 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 md:px-6 py-8 md:py-0 pb-16 sm:pb-24 min-h-[60vh] md:min-h-[calc(100vh-80px)]">
+        {/* Google stars */}
+        <div className="flex items-center gap-2 mb-3 md:mb-4">
+          <div className="flex gap-0.5">
+            {Array.from({ length: 5 }, (_, i) => (
+              <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
+            ))}
+          </div>
+          <span className="text-amber-400 font-bold text-sm">4.9/5</span>
+          <span className="text-slate-400 text-xs sm:text-sm">· 47 avis Google vérifiés</span>
+        </div>
+
         {hero.badge && (
           <div className="inline-flex items-center gap-1.5 md:gap-2 bg-[#B8CC30]/15 backdrop-blur-sm border border-[#B8CC30]/30 rounded-full px-4 md:px-5 py-1.5 md:py-2 mb-4 md:mb-8">
             <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#B8CC30] animate-pulse" />
@@ -57,9 +68,16 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
         >
           <DynamicH1 title={hero.title} dynamicH1={hero.dynamicH1} />
         </Suspense>
-        <p className="text-sm sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-5 md:mb-10 leading-relaxed">
+        <p className="text-sm sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-5 md:mb-6 leading-relaxed">
           {hero.subtitle}
         </p>
+
+        {/* Stats cards */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-5 md:mb-8">
+          <span className="bg-blue-500/10 border border-blue-500/20 text-blue-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">15+ ans d&apos;expérience</span>
+          <span className="bg-green-500/10 border border-green-500/20 text-green-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">200+ toitures traitées</span>
+          <span className="bg-orange-500/10 border border-orange-500/20 text-orange-200 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full">100% garantie décennale</span>
+        </div>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full max-w-md sm:max-w-none sm:justify-center">
@@ -75,6 +93,14 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:hidden" />
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform hidden sm:block" />
           </button>
+        </div>
+
+        {/* FUD reduction */}
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 mt-4 md:mt-5 text-slate-400 text-xs sm:text-sm">
+          <span className="flex items-center gap-1"><Check size={13} className="text-[#B8CC30]" />Sans engagement</span>
+          <span className="flex items-center gap-1"><Check size={13} className="text-[#B8CC30]" />100% gratuit</span>
+          <span className="flex items-center gap-1"><Check size={13} className="text-[#B8CC30]" />Rappel sous 2h</span>
+          <span className="flex items-center gap-1"><Check size={13} className="text-[#B8CC30]" />Données protégées</span>
         </div>
       </div>
 

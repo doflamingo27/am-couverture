@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
 import { TrustBadges } from "@/components/TrustBadges";
 import { LeadForm } from "@/components/LeadForm";
+import { PromoOfferTable } from "@/components/PromoOfferTable";
 import { PainSection } from "@/components/PainSection";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { Testimonials } from "@/components/Testimonials";
@@ -24,16 +25,25 @@ export default function Page() {
       <HeroSection hero={config.hero} />
       <TrustBadges badges={config.trustBadges} />
       <LeadForm form={config.form} />
+      <PromoOfferTable deadline="21 avril" />
       <PainSection variant="demoussage" />
       <BeforeAfter items={config.beforeAfter} />
       <Testimonials variant="demoussage" />
       <Services
         data={config.services}
-        title="Votre toiture propre et protégée en 4 étapes — sans stress et sans surprise"
+        title="Votre toiture traitée en 3 étapes — résultat visible immédiatement"
       />
-      <PlayTheTapeForward variant="demoussage" />
+      <PlayTheTapeForward
+        variant="promo"
+        urgencyText="Offre valable jusqu'au 21 avril — Places limitées"
+      />
       <FAQ items={config.faq} />
-      <CloserSection variant="demoussage" form={config.form} />
+      <CloserSection
+        variant="promo"
+        headline="Il reste des créneaux disponibles avant le 21 avril."
+        ctaText="Réserver mon créneau maintenant"
+        form={config.form}
+      />
       <Footer />
     </>
   );

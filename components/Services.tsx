@@ -49,7 +49,7 @@ function renderTitle(title: string, highlightWord?: string) {
   );
 }
 
-export function Services({ data }: { data: LandingPageConfig["services"] }) {
+export function Services({ data, title }: { data: LandingPageConfig["services"]; title?: string }) {
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6 bg-[#1E293B]/60">
       <div className="max-w-5xl mx-auto">
@@ -63,7 +63,7 @@ export function Services({ data }: { data: LandingPageConfig["services"] }) {
             </div>
           )}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
-            {renderTitle(data.title, data.highlightWord)}
+            {title || renderTitle(data.title, data.highlightWord)}
           </h2>
         </div>
 

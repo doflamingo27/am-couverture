@@ -12,7 +12,7 @@ type FormData = {
   postalCode: string;
 };
 
-export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
+export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: LandingPageConfig["form"]; id?: string; sectionClassName?: string }) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<FormData>({
     projectType: "",
@@ -77,7 +77,7 @@ export function LeadForm({ form }: { form: LandingPageConfig["form"] }) {
   };
 
   return (
-    <section id="formulaire" className="py-14 sm:py-20 px-6">
+    <section id={id} className={sectionClassName || "py-14 sm:py-20 px-6"}>
       <div className="max-w-xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-8">
