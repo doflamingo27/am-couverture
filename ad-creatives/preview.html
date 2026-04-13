@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prévisualisation Images LP V2 — AM Couverture</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0F172A; color: #fff; padding: 20px; max-width: 1400px; margin: 0 auto; }
+    h1 { text-align: center; font-size: 2rem; margin-bottom: 10px; }
+    .subtitle { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1.1rem; }
+    h3 { font-size: 1.1rem; color: #B8CC30; margin: 30px 0 15px; text-transform: uppercase; letter-spacing: 1px; }
+    .lp-section { background: #1e293b; border-radius: 12px; padding: 30px; margin-bottom: 40px; }
+    .lp-title { font-size: 1.3rem; color: #B8CC30; margin-bottom: 5px; }
+    .lp-url { color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; align-items: start; }
+    .comparison .col { background: #0f172a; border-radius: 8px; padding: 15px; }
+    .comparison .col.current { border: 2px solid #475569; }
+    .comparison .col.new { border: 2px solid #B8CC30; }
+    .col-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-weight: 700; }
+    .col.current .col-label { color: #ef4444; }
+    .col.new .col-label { color: #B8CC30; }
+    .col img { width: 100%; border-radius: 6px; display: block; }
+    .col .img-path { font-size: 0.75rem; color: #64748b; margin-top: 8px; word-break: break-all; }
+    .pair-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+    .pair-row img { width: 100%; border-radius: 6px; }
+    .pair-label { font-size: 0.8rem; color: #94a3b8; text-align: center; margin-top: 5px; }
+    .ba-section { background: #0f172a; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+    .ba-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 10px; }
+    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .ba-col .col-label { font-size: 0.8rem; margin-bottom: 8px; }
+    .instructions { background: #1e293b; border: 2px solid #B8CC30; border-radius: 12px; padding: 20px; margin-bottom: 40px; }
+    .instructions h3 { margin-top: 0; }
+    .instructions ul { padding-left: 20px; color: #cbd5e1; line-height: 1.8; }
+    .img-missing { background: #1e293b; display: flex; align-items: center; justify-content: center; min-height: 200px; border-radius: 6px; color: #64748b; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<h1>Prévisualisation des Nouvelles Images V2</h1>
+<p class="subtitle">AM Couverture — 3 Landing Pages — Validation avant application</p>
+
+<div class="instructions">
+  <h3>Instructions</h3>
+  <ul>
+    <li>Pour chaque image, comparez l'<strong style="color:#ef4444">ACTUELLE</strong> (gauche) avec la <strong style="color:#B8CC30">PROPOSÉE V2</strong> (droite)</li>
+    <li>Les images sont organisées par Landing Page puis par section</li>
+    <li>V2 : Heroes avec logo visible, avant/après avec même maison (inputImagePath), problème/solution réalistes</li>
+    <li>Validez ou rejetez chaque image individuellement</li>
+  </ul>
+</div>
+
+<!-- LP 1 — DEMOUSSAGE -->
+<div class="lp-section">
+  <div class="lp-title">LP 1 — Démoussage</div>
+  <div class="lp-url">/demoussage</div>
+
+  <h3>Hero (arrière-plan)</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/roofcleaning1.jpg" alt="Hero actuel">
+      <div class="img-path">roofcleaning1.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="hero-demoussage-v2.png" alt="Hero proposé V2">
+      <div class="img-path">hero-demoussage-v2 — Ouvrier de dos, nettoyeur basse pression, logo AM visible</div>
+    </div>
+  </div>
+
+  <h3>Section Problème</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/demoussage-probleme.jpg" alt="Problème actuel">
+      <div class="img-path">demoussage-probleme.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="demoussage-probleme-v2.png" alt="Problème proposé V2">
+      <div class="img-path">demoussage-probleme-v2 — Section toit, mousse jaune-verte, tuiles noircies, ciel gris</div>
+    </div>
+  </div>
+
+  <h3>Section Solution</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/demoussage-solution.jpg" alt="Solution actuelle">
+      <div class="img-path">demoussage-solution.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="demoussage-solution-v2.png" alt="Solution proposée V2">
+      <div class="img-path">demoussage-solution-v2 — Même section toit propre, tuiles orange-brun, ciel bleu</div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 1 (Orléans)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Maison à Orléans — Pavillon R+1, chien-assis, volets blancs, rosiers</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/demoussage-avant-1.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/demoussage-apres-1.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="demoussage-avant-1-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="demoussage-apres-1-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 2 (Ingré)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Pavillon à Ingré — Plain-pied, porte bleue, haie basse, clôture verte</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/demoussage-avant-2.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/demoussage-apres-2.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="demoussage-avant-2-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="demoussage-apres-2-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 3 (Fleury-les-Aubrais)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Maison à Fleury-les-Aubrais — Pavillon R+1, volets gris, buis taillés</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/demoussage-avant-3.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/demoussage-apres-3.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="demoussage-avant-3-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="demoussage-apres-3-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LP 2 — DEMOUSSAGE V2 -->
+<div class="lp-section">
+  <div class="lp-title">LP 2 — Démoussage V2</div>
+  <div class="lp-url">/demoussage-v2</div>
+
+  <h3>Hero (arrière-plan)</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/hero1.jpg" alt="Hero actuel">
+      <div class="img-path">hero1.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="hero-demoussage-v2-lp2.png" alt="Hero proposé V2">
+      <div class="img-path">hero-demoussage-v2-lp2 — Ouvrier accroupi inspectant tuiles, logo AM visible</div>
+    </div>
+  </div>
+
+  <h3>Section Problème</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/demoussage-v2-probleme.jpg" alt="Problème actuel">
+      <div class="img-path">demoussage-v2-probleme.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="demoussage-v2-probleme-v2.png" alt="Problème proposé V2">
+      <div class="img-path">demoussage-v2-probleme-v2 — Toiture lichen/mousse, gouttière avec débris, ciel couvert</div>
+    </div>
+  </div>
+
+  <h3>Section Solution</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/demoussage-v2-solution.jpg" alt="Solution actuelle">
+      <div class="img-path">demoussage-v2-solution.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="demoussage-v2-solution-v2.png" alt="Solution proposée V2">
+      <div class="img-path">demoussage-v2-solution-v2 — Même toit nettoyé, gouttière propre, ciel clair</div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 1 (Orléans)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Maison à Orléans — Pavillon crépi beige, 2 chiens-assis, allée gravillonnée</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/demoussage-v2-avant-1.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/demoussage-v2-apres-1.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="demoussage-v2-avant-1-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="demoussage-v2-apres-1-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 2 (Saran)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Pavillon à Saran — Petit pavillon blanc, toit 4 pans, garage accolé</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/demoussage-v2-avant-2.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/demoussage-v2-apres-2.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="demoussage-v2-avant-2-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="demoussage-v2-apres-2-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 3 (Olivet)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Villa à Olivet — Maison bourgeoise, pierres apparentes, grandes fenêtres</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/demoussage-v2-avant-3.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/demoussage-v2-apres-3.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="demoussage-v2-avant-3-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="demoussage-v2-apres-3-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LP 3 — RENOVATION -->
+<div class="lp-section">
+  <div class="lp-title">LP 3 — Rénovation</div>
+  <div class="lp-url">/renovation</div>
+
+  <h3>Hero (arrière-plan)</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/hero2.jpg" alt="Hero actuel">
+      <div class="img-path">hero2.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="hero-renovation-v2.png" alt="Hero proposé V2">
+      <div class="img-path">hero-renovation-v2 — Ouvrier posant tuiles neuves, charpente visible, logo AM</div>
+    </div>
+  </div>
+
+  <h3>Section Problème</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/renovation-probleme.jpg" alt="Problème actuel">
+      <div class="img-path">renovation-probleme.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="renovation-probleme-v2.png" alt="Problème proposé V2">
+      <div class="img-path">renovation-probleme-v2 — Faîtage abîmé, tuiles cassées, gouttière rouillée, ciel gris</div>
+    </div>
+  </div>
+
+  <h3>Section Solution</h3>
+  <div class="comparison">
+    <div class="col current">
+      <div class="col-label">Actuelle</div>
+      <img src="http://localhost:3000/images/renovation-solution.jpg" alt="Solution actuelle">
+      <div class="img-path">renovation-solution.jpg</div>
+    </div>
+    <div class="col new">
+      <div class="col-label">Proposée V2</div>
+      <img src="renovation-solution-v2.png" alt="Solution proposée V2">
+      <div class="img-path">renovation-solution-v2 — Tuiles neuves, faîtage refait, gouttière zinc, ciel bleu</div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 1 (Orléans)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Maison à Orléans — Pavillon R+1, volets roulants, enduit beige</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/renovation-avant-1.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/renovation-apres-1.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="renovation-avant-1-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="renovation-apres-1-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Avant / Après — Paire 2 (Fleury-les-Aubrais)</h3>
+  <div class="ba-section">
+    <div class="ba-title">Pavillon à Fleury-les-Aubrais — Plain-pied, toit 2 pans, enduit crème</div>
+    <div class="ba-grid">
+      <div class="ba-col">
+        <div class="col-label" style="color:#ef4444">ACTUELLE</div>
+        <div class="pair-row">
+          <div><img src="http://localhost:3000/images/renovation-avant-2.jpg"><div class="pair-label">Avant</div></div>
+          <div><img src="http://localhost:3000/images/renovation-apres-2.jpg"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+      <div class="ba-col">
+        <div class="col-label" style="color:#B8CC30">PROPOSÉE V2</div>
+        <div class="pair-row">
+          <div><img src="renovation-avant-2-v2.png"><div class="pair-label">Avant</div></div>
+          <div><img src="renovation-apres-2-v2.png"><div class="pair-label">Après</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p style="text-align:center; color:#64748b; padding: 40px 0;">
+  AM Couverture — Document de prévisualisation V2 — Généré le 20/03/2026
+</p>
+
+</body>
+</html>

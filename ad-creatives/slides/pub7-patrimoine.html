@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { position: relative; width: 1080px; height: 1080px; background: #0A0A0A; }
+
+  .bg-photo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 35%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.92) 72%); }
+
+  .content { position: absolute; bottom: 0; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0 64px 100px 64px; z-index: 2; }
+
+  .lead { color: white; font-size: 28px; font-weight: 600; text-align: center; margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .title { color: white; font-size: 38px; font-weight: 700; text-align: center; margin-bottom: 36px; line-height: 1.25; }
+  .title .accent { color: #B8CC30; }
+
+  .bullets { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 40px; }
+  .bullet { color: rgba(255,255,255,0.85); font-size: 20px; font-weight: 500; display: flex; align-items: center; gap: 12px; }
+  .dot { color: #B8CC30; font-size: 16px; }
+
+  .cta { background: #B8CC30; color: #0A0A0A; font-size: 22px; font-weight: 800; padding: 18px 48px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; }
+
+  .logo { position: absolute; bottom: 28px; right: 48px; display: flex; align-items: center; gap: 8px; z-index: 2; }
+  .logo-square { width: 32px; height: 32px; background: #B8CC30; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: #0F172A; border-radius: 4px; }
+  .logo-text { color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 700; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img class="bg-photo" src="pub7-patrimoine-fond.jpg" alt="Belle maison toit neuf">
+    <div class="overlay"></div>
+
+    <div class="content">
+      <div class="lead">Votre toiture =</div>
+      <div class="title"><span class="accent">15%</span> de la valeur<br>de votre maison</div>
+      <div class="bullets">
+        <div class="bullet"><span class="dot">●</span> Valeur préservée</div>
+        <div class="bullet"><span class="dot">●</span> Zéro infiltration</div>
+        <div class="bullet"><span class="dot">●</span> Garanti 10 ans</div>
+      </div>
+      <div class="cta">Devis rénovation →</div>
+    </div>
+
+    <div class="logo">
+      <div class="logo-square">AM</div>
+      <span class="logo-text">COUVERTURE</span>
+    </div>
+  </div>
+</body>
+</html>

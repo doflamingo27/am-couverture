@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { width: 1080px; height: 1080px; display: flex; flex-direction: column; background: #1a1a1a; }
+  .photo-section { position: relative; width: 1080px; height: 490px; overflow: hidden; }
+  .photo-section img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .badge { position: absolute; top: 16px; left: 16px; padding: 8px 20px; border-radius: 6px; font-size: 22px; font-weight: 800; color: white; letter-spacing: 2px; text-transform: uppercase; z-index: 2; }
+  .badge-avant { background: #DC2626; }
+  .badge-apres { background: #16A34A; }
+  .divider { width: 1080px; height: 4px; background: white; }
+  .bottom-bar { width: 1080px; height: 96px; background: rgba(15, 23, 42, 0.92); display: flex; align-items: center; justify-content: center; padding: 0 40px; }
+  .bottom-text { color: white; font-size: 28px; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo-section">
+      <div class="badge badge-avant">Avant</div>
+      <img src="../maison-1/avant.jpg" alt="Avant">
+    </div>
+    <div class="divider"></div>
+    <div class="photo-section">
+      <div class="badge badge-apres">Après</div>
+      <img src="../maison-1/apres.jpg" alt="Après">
+    </div>
+    <div class="bottom-bar">
+      <span class="bottom-text">Loiret (45) — Démoussage complet + hydrofuge</span>
+    </div>
+  </div>
+</body>
+</html>

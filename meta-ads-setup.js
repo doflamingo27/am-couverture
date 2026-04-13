@@ -102,20 +102,22 @@ const PUB_CONFIGS = [
     format: 'CAROUSEL',
     landingPage: '/demoussage',
     utmContent: 'p1-transformation',
-    primaryText: `Même maison. Même toit. Résultat méconnaissable.
+    primaryText: `Votre toit est méconnaissable après notre passage. Faites glisser →
 
-Faites glisser pour voir 3 transformations de toitures dans le Loiret →
+3 toitures du Loiret. Avant : mousse, lichen, tuiles ternies.
+Après : propres, protégées, comme neuves.
 
-Nos clients ne s'attendaient pas à un tel résultat.
-Vous non plus, vous ne vous y attendrez pas.
+Ce qu'on fait :
+● Nettoyage basse pression (jamais de Kärcher)
+● Traitement anti-mousse longue durée
+● Hydrofuge protecteur 5-10 ans
+● Nettoyage complet du chantier
 
-● 4.9/5 sur Google
-● Garantie décennale
-● Devis gratuit en 24h
+4.9/5 sur Google · Garantie décennale · Artisan local
 
-→ Obtenez votre devis gratuit`,
-    headline: 'Démoussage + Hydrofuge — Résultat garanti',
-    description: 'Artisan local Loiret · Rappel sous 2h · Devis gratuit',
+→ Demandez votre devis gratuit en 24h`,
+    headline: 'Démoussage + Hydrofuge — Résultat visible immédiatement',
+    description: 'Rappel sous 2h · Devis gratuit · Artisan local Loiret (45)',
     slideHeadline: 'Voir le résultat →',
     slideDescription: 'Devis gratuit en 24h — Artisan local Loiret',
     images: [
@@ -132,21 +134,23 @@ Vous non plus, vous ne vous y attendrez pas.
     format: 'IMAGE',
     landingPage: '/demoussage',
     utmContent: 'p2-diagnostic',
-    primaryText: `Vous ne savez pas dans quel état est votre toiture ?
+    primaryText: `On monte sur votre toit. On inspecte. On vous dit tout. Gratuitement.
 
-On monte. On inspecte. On vous dit tout. Gratuitement.
+Vous ne montez probablement jamais sur votre toiture.
+Nous si. Et ce qu'on trouve surprend toujours.
 
-Notre diagnostic complet comprend :
-● Inspection visuelle de chaque tuile
-● Identification des zones à risque
+Ce que comprend notre diagnostic :
+● Inspection tuile par tuile
+● Identification des zones à risque d'infiltration
+● Rapport complet + photos
 ● Devis détaillé sans engagement
 
-Intervention dans tout le Loiret (45).
+Plus de 200 toitures inspectées dans le Loiret.
 Rappel sous 2h.
 
-→ Réservez votre diagnostic offert`,
-    headline: 'Diagnostic Toiture GRATUIT — Sans engagement',
-    description: 'On monte, on inspecte, on vous dit tout. Rappel sous 2h.',
+→ Réservez votre diagnostic gratuit`,
+    headline: 'Diagnostic Toiture GRATUIT — On vous dit tout',
+    description: 'Propriétaires Loiret : inspection complète + rapport photos offert',
     images: [
       path.join(ADS_DIR, 'PUB 2', 'pub2-diagnostic-offert.png'),
     ],
@@ -159,17 +163,21 @@ Rappel sous 2h.
     format: 'IMAGE',
     landingPage: '/demoussage',
     utmContent: 'p3-comparatif',
-    primaryText: `Un nettoyage préventif coûte 10 à 20x moins cher qu'une rénovation complète.
+    primaryText: `Un nettoyage préventif coûte 10 à 20x moins cher qu'une rénovation.
 
-Votre toiture se dégrade chaque jour sous la mousse. Plus vous attendez, plus la facture grimpe.
+Chaque mois sans entretien, la mousse s'infiltre plus profond. Les tuiles deviennent poreuses. L'eau s'infiltre. Et un jour, c'est la charpente qui trinque.
 
-● Diagnostic gratuit sous 24h
-● Artisan local certifié — Loiret (45)
-● Devis transparent et personnalisé
+À ce stade, ce n'est plus un nettoyage — c'est une rénovation complète.
 
-→ Demandez votre devis gratuit`,
-    headline: 'Nettoyage préventif vs Rénovation — Le calcul est vite fait',
-    description: '10-20x moins cher que la rénovation · Devis gratuit · Loiret (45)',
+La bonne nouvelle : un traitement préventif protège votre toit pour 5-10 ans. Et ça coûte une fraction du prix.
+
+● Devis transparent, personnalisé
+● Artisan certifié · Garantie décennale
+● Intervention rapide dans tout le Loiret
+
+→ Demandez votre devis avant que ça empire`,
+    headline: 'Prévention vs Rénovation — Le calcul est vite fait',
+    description: '10-20x moins cher d\'agir maintenant · Devis gratuit en 24h · Loiret (45)',
     images: [
       path.join(ADS_DIR, 'PUB 3', 'pub3-comparatif-choc.png'),
     ],
@@ -182,20 +190,23 @@ Votre toiture se dégrade chaque jour sous la mousse. Plus vous attendez, plus l
     format: 'IMAGE',
     landingPage: '/demoussage',
     utmContent: 'p4-bouclier',
-    primaryText: `Votre voisin a fait nettoyer son toit il y a 2 ans. La mousse est déjà revenue.
+    primaryText: `La mousse sur le toit de votre voisin est revenue en 2 ans. Voici pourquoi.
 
-Pourquoi ? Parce qu'un simple nettoyage ne suffit pas.
+Un simple nettoyage retire la mousse en surface.
+Notre traitement hydrofuge l'empêche de revenir pendant 5 à 10 ans.
 
-Notre traitement hydrofuge professionnel protège vos tuiles pendant 5 à 10 ans. Pas 1 an. Pas 2 ans. Minimum 5 ans, garanti.
+La différence ? Le produit professionnel qu'on applique après le nettoyage. Il rend vos tuiles imperméables — la mousse ne peut plus s'accrocher.
 
 ● Nettoyage basse pression (pas de Kärcher)
-● Traitement anti-mousse longue durée
-● Application hydrofuge protecteur
+● Anti-mousse professionnel longue durée
+● Hydrofuge protecteur certifié
 ● Garantie décennale
 
-→ Demandez votre devis détaillé`,
-    headline: 'Avec hydrofuge : protection 5-10 ans. Sans : la mousse revient en 1 an.',
-    description: 'Nettoyage + hydrofuge pro · Protection 5-10 ans garantie · Loiret (45)',
+Plus de 200 toitures traitées dans le Loiret.
+
+→ Demandez votre devis avec hydrofuge inclus`,
+    headline: 'Hydrofuge pro : votre toit protégé 5-10 ans. Garanti.',
+    description: 'Nettoyage seul = mousse en 1 an. Avec hydrofuge = protection 5-10 ans.',
     images: [
       path.join(ADS_DIR, 'PUB 4', 'pub4-bouclier-v2.png'),
     ],
@@ -208,20 +219,23 @@ Notre traitement hydrofuge professionnel protège vos tuiles pendant 5 à 10 ans
     format: 'IMAGE',
     landingPage: '/demoussage-v2',
     utmContent: 'p5-degats',
-    primaryText: `Depuis le sol, votre toit a l'air normal.
+    primaryText: `Depuis le sol, votre toit a l'air normal. La réalité est souvent différente.
 
-Mais montez dessus et voilà ce qu'on trouve :
-● Mousse qui retient l'humidité 24h/24
-● Tuiles devenues poreuses et fragiles
-● Micro-fissures invisibles à l'œil nu
+Voilà ce qu'on trouve quand on monte :
+● Mousse qui retient l'humidité sous les tuiles 24h/24
+● Tuiles devenues poreuses par le gel
+● Micro-fissures invisibles depuis le sol
+● Gouttières bouchées qui débordent en silence
 
-Le problème ? Quand vous le voyez depuis le sol, il est déjà trop tard.
+Le pire ? Quand les dégâts sont visibles depuis la rue, il est déjà trop tard pour un simple nettoyage.
 
-On vérifie pour vous. Gratuitement. Sans engagement.
+On vérifie pour vous. Gratuitement. En 30 minutes.
+
+4.9/5 sur Google · Garantie décennale
 
 → Réservez votre inspection gratuite`,
-    headline: 'Votre Toit Cache des Dégâts — Inspection GRATUITE',
-    description: 'Mousse, fissures, infiltrations invisibles depuis le sol. On vérifie pour vous.',
+    headline: 'Votre toit cache des dégâts — Inspection offerte',
+    description: 'On monte, on inspecte, on vous dit tout. Rapport photos inclus. Loiret (45)',
     images: [
       path.join(ADS_DIR, 'PUB 5', 'pub5-degats-invisibles.png'),
     ],
@@ -234,23 +248,24 @@ On vérifie pour vous. Gratuitement. Sans engagement.
     format: 'CAROUSEL',
     landingPage: '/renovation',
     utmContent: 'p6-cle-en-main',
-    primaryText: `Votre toiture a besoin de plus qu'un nettoyage ?
+    primaryText: `Votre toiture a besoin de plus qu'un nettoyage ? On gère tout de A à Z.
 
-On gère tout. De A à Z.
+Étape 1 → Diagnostic complet toiture + charpente
+Étape 2 → Dépose et évacuation de l'ancienne couverture
+Étape 3 → Pose de la nouvelle couverture + zinguerie
+Étape 4 → Nettoyage du chantier + rapport photos
 
-Étape 1 : Diagnostic complet de la toiture et charpente
-Étape 2 : Dépose et évacuation de l'ancienne couverture
-Étape 3 : Pose de la nouvelle couverture + zinguerie
-Étape 4 : Nettoyage du chantier + rapport photos
+Résultat : un toit neuf, garanti 10 ans.
 
-Résultat : un toit neuf, garanti 10 ans (décennale).
+Pourquoi nous choisir :
+● On ne sous-traite rien — notre équipe de A à Z
+● Devis détaillé ligne par ligne, sans surprise
+● Garantie décennale sur tous les travaux
+● Plus de 200 toitures dans le Loiret
 
-Artisan local — Loiret (45)
-Rappel sous 2h
-
-→ Demandez votre devis rénovation`,
-    headline: 'Rénovation Toiture Complète — Garanti 10 ans',
-    description: 'On gère tout de A à Z · Devis gratuit · Artisan local Loiret',
+→ Demandez votre devis rénovation gratuit`,
+    headline: 'Rénovation toiture complète — Garanti 10 ans',
+    description: 'Diagnostic offert · On gère tout · Artisan local Loiret (45)',
     slideHeadline: 'Étape suivante →',
     slideDescription: 'Rénovation toiture garantie 10 ans',
     images: [
@@ -270,18 +285,20 @@ Rappel sous 2h
     utmContent: 'p7-patrimoine',
     primaryText: `Votre toiture représente 15% de la valeur de votre maison.
 
-Si elle est abîmée, c'est tout votre bien qui perd de la valeur.
+Si elle est abîmée, c'est tout votre patrimoine qui se déprécie. Et chaque mois qui passe aggrave la situation :
+● Infiltrations d'eau dans la charpente
+● Isolation dégradée — factures de chauffage en hausse
+● Valeur immobilière en baisse
 
-Une rénovation de toiture, c'est :
-● Valeur immobilière préservée
-● Zéro risque d'infiltration pour 30+ ans
-● Une maison qui retrouve son cachet
+Une rénovation de toiture, c'est un investissement qui protège votre bien pour 30 ans minimum.
 
-Artisan local dans le Loiret — Devis transparent et personnalisé.
+● Devis transparent et personnalisé
+● Garanti 10 ans (décennale)
+● Artisan local dans le Loiret
 
 → Demandez votre devis rénovation`,
-    headline: 'Protégez la Valeur de Votre Bien — Devis Gratuit',
-    description: 'Votre toiture = 15% de la valeur de votre maison. Rénovation garantie 10 ans.',
+    headline: 'Protégez 15% de la valeur de votre maison',
+    description: 'Rénovation toiture garanti 10 ans · Devis gratuit · Loiret (45)',
     images: [
       path.join(ADS_DIR, 'PUB 7', 'pub7-protecteur-patrimoine.png'),
     ],
@@ -294,21 +311,22 @@ Artisan local dans le Loiret — Devis transparent et personnalisé.
     format: 'CAROUSEL',
     landingPage: '/renovation',
     utmContent: 'p8-reprend-vie',
-    primaryText: `Cette maison dans le Loiret avait un toit qui prenait l'eau depuis 3 ans.
+    primaryText: `Cette maison dans le Loiret prenait l'eau depuis 3 ans. Faites glisser pour voir ce qu'on a fait →
 
-Aujourd'hui, elle a repris 10 ans de vie.
+Le propriétaire repoussait les travaux. Quand il a appelé, la charpente commençait à souffrir. On est intervenu en 2 semaines :
 
-Faites glisser pour voir la transformation →
-
-Ce qu'on a fait :
 ● Dépose complète de l'ancienne couverture
-● Vérification et renforcement charpente
-● Pose tuiles neuves + zinguerie complète
-● Résultat garanti 10 ans (décennale)
+● Vérification et renforcement de la charpente
+● Pose de tuiles neuves + zinguerie complète
+● Nettoyage intégral du chantier
+
+Résultat : un toit neuf, garanti 10 ans. Et une maison qui a repris 10 ans de vie.
+
+4.9/5 sur Google · Garantie décennale
 
 → Demandez votre devis rénovation`,
-    headline: 'Avant / En cours / Après — Rénovation Toiture Complète',
-    description: 'Elle a repris 10 ans de vie · Garanti décennale · Devis gratuit',
+    headline: 'Elle a repris 10 ans de vie — Rénovation complète',
+    description: 'Avant / En cours / Après · Garanti décennale · Devis gratuit',
     slideHeadline: 'Voir la suite →',
     slideDescription: 'Rénovation complète — Garanti 10 ans',
     images: [
@@ -326,20 +344,24 @@ Ce qu'on a fait :
     format: 'CAROUSEL',
     landingPage: '/renovation',
     utmContent: 'p9-transformation-reno',
-    primaryText: `Même maison. Toit neuf. Transformation totale.
+    primaryText: `Même maison. Toit neuf. Transformation totale. Faites glisser →
 
-Faites glisser pour voir 3 rénovations de toitures dans le Loiret →
+Tuiles cassées, fuites, gouttières rouillées — c'est ce que nos clients avaient avant de nous appeler.
 
-Tuiles cassées, fuites, gouttières rouillées... et après notre passage, un toit neuf garanti 10 ans.
+Ce qu'ils ont maintenant :
+● Un toit neuf, étanche, garanti 10 ans
+● Des gouttières zinc neuves
+● Zéro infiltration
+● Une maison qui a retrouvé sa valeur
 
-● Dépose + pose complète
-● Zinguerie neuve
-● Garantie décennale
-● Devis gratuit en 24h
+On gère tout : dépose, pose, zinguerie, nettoyage.
+Un seul interlocuteur du début à la fin.
 
-→ Obtenez votre devis rénovation`,
-    headline: 'Rénovation Toiture Avant / Après — Garanti 10 ans',
-    description: 'Toiture neuve · Garanti décennale · Artisan local Loiret (45)',
+4.9/5 sur Google · Garantie décennale
+
+→ Obtenez votre devis rénovation gratuit`,
+    headline: 'Toiture neuve, garanti 10 ans — Avant / Après',
+    description: 'Dépose + pose complète · Artisan local Loiret (45) · Devis gratuit',
     slideHeadline: 'Voir le résultat →',
     slideDescription: 'Rénovation toiture garantie 10 ans — Loiret (45)',
     images: [
@@ -374,46 +396,11 @@ async function main() {
   }
   console.log('  ✅ Tous les fichiers images trouvés\n');
 
-  // ---- ÉTAPE 1 : Créer la campagne ----
-  console.log('📌 ÉTAPE 1 — Création de la campagne...');
-  const campaign = await callMetaAPI(`${AD_ACCOUNT_ID}/campaigns`, {
-    name: 'Lead Gen — AM Couverture — Vague 1',
-    objective: 'OUTCOME_LEADS',
-    special_ad_categories: [],
-    daily_budget: 3200,
-    bid_strategy: 'LOWEST_COST_WITHOUT_CAP',
-    status: 'PAUSED',
-  });
-  const campaignId = campaign.id;
-  console.log(`  ✅ Campagne créée: ${campaignId}\n`);
-
-  await delay(1000);
-
-  // ---- ÉTAPE 2 : Créer l'ad set ----
-  console.log('📌 ÉTAPE 2 — Création de l\'ad set...');
-  const adset = await callMetaAPI(`${AD_ACCOUNT_ID}/adsets`, {
-    name: 'Loiret Large — 30-65 ans — Advantage+',
-    campaign_id: campaignId,
-    billing_event: 'IMPRESSIONS',
-    optimization_goal: 'OFFSITE_CONVERSIONS',
-    targeting: {
-      geo_locations: { regions: [{ key: '1498' }] },
-      age_min: 30,
-      age_max: 65,
-      locales: [6],
-    },
-    promoted_object: {
-      pixel_id: PIXEL_ID,
-      custom_event_type: 'LEAD',
-    },
-    dsa_beneficiary: 'AM Couverture',
-    dsa_payor: 'AM Couverture',
-    status: 'PAUSED',
-  });
-  const adsetId = adset.id;
-  console.log(`  ✅ Ad Set créé: ${adsetId}\n`);
-
-  await delay(1000);
+  // ---- Campagne et Ad Set existants (déjà créés) ----
+  const campaignId = '120243283187690572';
+  const adsetId = '120243283188180572';
+  console.log(`📌 Campagne existante: ${campaignId}`);
+  console.log(`📌 Ad Set existant:    ${adsetId}\n`);
 
   // ---- ÉTAPE 3 & 4 : Upload images + Créer ads ----
   console.log('📌 ÉTAPE 3 & 4 — Upload images + Création des ads...\n');

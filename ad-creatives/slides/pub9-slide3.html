@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { position: relative; width: 1080px; height: 1080px; display: flex; flex-direction: column; }
+
+  .photo-section { position: relative; width: 1080px; height: 510px; overflow: hidden; }
+  .photo-section img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .badge { position: absolute; top: 16px; left: 16px; padding: 8px 20px; font-size: 15px; font-weight: 800; color: white; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; z-index: 2; }
+  .badge-avant { background: #475569; }
+  .badge-apres { background: #16A34A; }
+
+
+  .bar { width: 1080px; height: 60px; background: #0A0A0A; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; }
+  .bar-text { color: rgba(255,255,255,0.7); font-size: 17px; font-weight: 500; letter-spacing: 0.5px; }
+  .bar-right { display: flex; align-items: center; gap: 16px; }
+  .bar-badges { display: flex; align-items: center; gap: 14px; color: rgba(255,255,255,0.45); font-size: 14px; font-weight: 500; }
+  .bar-dot { color: #B8CC30; font-size: 10px; }
+  .bar-logo { display: flex; align-items: center; gap: 6px; }
+  .bar-logo-square { width: 24px; height: 24px; background: #B8CC30; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; color: #0F172A; border-radius: 3px; }
+  .bar-logo-text { color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo-section">
+      <img src="pub9-reno-avant-C.jpg" alt="Avant renovation">
+      <div class="badge badge-avant">Avant</div>
+    </div>
+
+    <div class="photo-section">
+      <img src="pub9-reno-apres-C.jpg" alt="Apres renovation">
+      <div class="badge badge-apres">Apres</div>
+    </div>
+
+    <div class="bar">
+      <span class="bar-text">Loiret (45) — Toiture + gouttieres</span>
+      <div class="bar-right">
+        <div class="bar-badges">
+          <span><span class="bar-dot">●</span> 4.9/5</span>
+          <span><span class="bar-dot">●</span> Decennale</span>
+        </div>
+        <div class="bar-logo">
+          <div class="bar-logo-square">AM</div>
+          <span class="bar-logo-text">COUVERTURE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { position: relative; width: 1080px; height: 1080px; background: #000; }
+
+  /* Photo de fond */
+  .bg-photo { position: absolute; top: 0; left: 0; width: 100%; height: 75%; object-fit: cover; object-position: center 35%; }
+
+  /* Gradient overlay */
+  .gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.92) 62%, rgba(0,0,0,0.98) 72%); }
+
+  /* Badge OFFRE DU MOIS */
+  .badge { position: absolute; top: 28px; right: 28px; background: #F97316; color: white; font-size: 20px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 12px 24px; border-radius: 50px; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+
+  /* Contenu texte */
+  .content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 0 56px 0 56px; z-index: 10; }
+  .title { color: white; font-size: 44px; font-weight: 600; line-height: 1.2; margin-bottom: 8px; }
+  .title-highlight { color: #F97316; font-size: 56px; font-weight: 800; display: block; margin-bottom: 28px; }
+  .checklist { list-style: none; margin-bottom: 32px; }
+  .checklist li { color: rgba(255,255,255,0.9); font-size: 28px; font-weight: 500; padding: 8px 0; display: flex; align-items: center; gap: 14px; }
+  .check { color: #22C55E; font-size: 26px; }
+
+  /* Séparateur */
+  .separator { width: 100%; height: 1px; background: rgba(255,255,255,0.2); margin-bottom: 20px; }
+
+  /* Footer */
+  .footer { display: flex; align-items: center; justify-content: space-between; padding-bottom: 32px; }
+  .footer-left { color: rgba(255,255,255,0.8); font-size: 24px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-square { width: 38px; height: 38px; background: #B8CC30; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 900; color: #0F172A; border-radius: 5px; }
+  .logo-text { color: white; font-size: 18px; font-weight: 700; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img class="bg-photo" src="../hero-renovation-v2.png" alt="Couvreur">
+    <div class="gradient"></div>
+    <div class="badge">Offre du mois</div>
+    <div class="content">
+      <div class="title">Diagnostic toiture</div>
+      <span class="title-highlight">100% GRATUIT</span>
+      <ul class="checklist">
+        <li><span class="check">✅</span> Inspection complète de votre toiture</li>
+        <li><span class="check">✅</span> Identification des zones à risque</li>
+        <li><span class="check">✅</span> Devis détaillé sans engagement</li>
+      </ul>
+      <div class="separator"></div>
+      <div class="footer">
+        <span class="footer-left">📞 Rappel sous 2h · Loiret (45)</span>
+        <div class="logo">
+          <div class="logo-square">AM</div>
+          <span class="logo-text">COUVERTURE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

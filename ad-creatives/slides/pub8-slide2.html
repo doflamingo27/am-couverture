@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { position: relative; width: 1080px; height: 1080px; background: #0A0A0A; }
+
+  .bg-photo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+  .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.88) 68%); }
+
+  .content { position: absolute; bottom: 0; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0 64px 120px 64px; z-index: 2; }
+  .pill { background: #F97316; color: white; font-size: 20px; font-weight: 800; letter-spacing: 3px; padding: 12px 32px; border-radius: 50px; text-transform: uppercase; margin-bottom: 28px; }
+  .title { color: white; font-size: 34px; font-weight: 700; text-align: center; line-height: 1.3; }
+
+  .footer { position: absolute; bottom: 0; left: 0; width: 1080px; height: 100px; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; z-index: 2; }
+  .progress { display: flex; gap: 8px; }
+  .bar { height: 6px; border-radius: 3px; width: 80px; }
+  .bar-filled { background: #B8CC30; }
+  .bar-empty { background: rgba(255,255,255,0.15); }
+  .logo { display: flex; align-items: center; gap: 8px; }
+  .logo-square { width: 32px; height: 32px; background: #B8CC30; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: #0F172A; border-radius: 4px; }
+  .logo-text { color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 700; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img class="bg-photo" src="pub8-reno-encours.jpg" alt="Maison en cours de renovation">
+    <div class="overlay"></div>
+
+    <div class="content">
+      <div class="pill">En cours</div>
+      <div class="title">Depose complete<br>+ verification charpente</div>
+    </div>
+
+    <div class="footer">
+      <div class="progress">
+        <div class="bar bar-filled"></div>
+        <div class="bar bar-filled"></div>
+        <div class="bar bar-empty"></div>
+        <div class="bar bar-empty"></div>
+      </div>
+      <div class="logo">
+        <div class="logo-square">AM</div>
+        <span class="logo-text">COUVERTURE</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

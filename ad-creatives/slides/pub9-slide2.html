@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { position: relative; width: 1080px; height: 1080px; display: flex; flex-direction: column; }
+
+  .photo-section { position: relative; width: 1080px; height: 510px; overflow: hidden; }
+  .photo-section img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .badge { position: absolute; top: 16px; left: 16px; padding: 8px 20px; font-size: 15px; font-weight: 800; color: white; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; z-index: 2; }
+  .badge-avant { background: #475569; }
+  .badge-apres { background: #16A34A; }
+
+
+  .bar { width: 1080px; height: 60px; background: #0A0A0A; display: flex; align-items: center; justify-content: center; padding: 0 48px; }
+  .bar-text { color: rgba(255,255,255,0.7); font-size: 17px; font-weight: 500; letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo-section">
+      <img src="pub9-reno-avant-B.jpg" alt="Avant renovation">
+      <div class="badge badge-avant">Avant</div>
+    </div>
+
+    <div class="photo-section">
+      <img src="pub9-reno-apres-B.jpg" alt="Apres renovation">
+      <div class="badge badge-apres">Apres</div>
+    </div>
+
+    <div class="bar">
+      <span class="bar-text">Loiret (45) — Couverture neuve + etancheite</span>
+    </div>
+  </div>
+</body>
+</html>

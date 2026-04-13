@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { width: 1080px; height: 1080px; display: flex; flex-direction: column; background: #0A0A0A; }
+
+  /* Photo section */
+  .photo-section { position: relative; width: 1080px; height: 920px; overflow: hidden; }
+  .photo-section img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+
+  /* Subtle gradient at bottom of photo for transition */
+  .photo-gradient { position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; background: linear-gradient(to bottom, transparent, rgba(10,10,10,0.6)); z-index: 1; }
+
+  /* Discrete pills */
+  .pill { position: absolute; bottom: 24px; z-index: 2; background: rgba(0,0,0,0.65); color: white; font-size: 16px; font-weight: 600; padding: 10px 20px; border-radius: 8px; backdrop-filter: blur(4px); }
+  .pill-left { left: 32px; }
+  .pill-right { right: 32px; }
+
+  /* Bottom text bar */
+  .bottom-bar { width: 1080px; height: 160px; background: #0A0A0A; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+  .text-content { display: flex; flex-direction: column; gap: 6px; }
+  .text-main { color: white; font-size: 24px; font-weight: 600; }
+  .text-sub { color: rgba(255,255,255,0.55); font-size: 18px; font-weight: 400; }
+  .logo { display: flex; align-items: center; gap: 8px; }
+  .logo-square { width: 32px; height: 32px; background: #B8CC30; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: #0F172A; border-radius: 4px; }
+  .logo-text { color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 700; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo-section">
+      <img src="../pub4-mousse-revenue.jpg" alt="Comparaison toiture">
+      <div class="photo-gradient"></div>
+      <div class="pill pill-left">❌ Sans hydrofuge</div>
+      <div class="pill pill-right">✅ Avec hydrofuge</div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="text-content">
+        <span class="text-main">Sans hydrofuge, la mousse revient en 1-2 ans.</span>
+        <span class="text-sub">Avec notre traitement → protection efficace 5 à 10 ans</span>
+      </div>
+      <div class="logo">
+        <div class="logo-square">AM</div>
+        <span class="logo-text">COUVERTURE</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

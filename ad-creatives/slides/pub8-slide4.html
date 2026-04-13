@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; }
+  .container { width: 1080px; height: 1080px; background: #0A0A0A; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+
+  .title { color: white; font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 12px; line-height: 1.2; }
+  .subtitle { color: #9CA3AF; font-size: 20px; font-weight: 400; text-align: center; margin-bottom: 48px; }
+
+  .steps { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 48px; }
+  .step { color: rgba(255,255,255,0.85); font-size: 22px; font-weight: 500; display: flex; align-items: center; gap: 14px; }
+  .dot { color: #B8CC30; font-size: 16px; }
+
+  .cta { background: #B8CC30; color: #0A0A0A; font-size: 22px; font-weight: 800; padding: 18px 48px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 32px; }
+
+  .badges { display: flex; align-items: center; gap: 20px; }
+  .badge { color: rgba(255,255,255,0.45); font-size: 16px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+  .badge-dot { color: rgba(255,255,255,0.3); font-size: 12px; }
+
+  .footer { position: absolute; bottom: 0; left: 0; width: 1080px; height: 100px; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+  .progress { display: flex; gap: 8px; }
+  .bar { height: 6px; border-radius: 3px; width: 80px; }
+  .bar-filled { background: #B8CC30; }
+  .logo { display: flex; align-items: center; gap: 8px; }
+  .logo-square { width: 32px; height: 32px; background: #B8CC30; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: #0F172A; border-radius: 4px; }
+  .logo-text { color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 700; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Renovation toiture complete</div>
+    <div class="subtitle">De la depose a la pose, on gere tout</div>
+
+    <div class="steps">
+      <div class="step"><span class="dot">●</span> Diagnostic complet offert</div>
+      <div class="step"><span class="dot">●</span> Depose et evacuation</div>
+      <div class="step"><span class="dot">●</span> Pose couverture neuve + zinguerie</div>
+      <div class="step"><span class="dot">●</span> Garanti 10 ans (decennale)</div>
+    </div>
+
+    <div class="cta">Devis gratuit →</div>
+
+    <div class="badges">
+      <span class="badge"><span class="badge-dot">●</span> Decennale</span>
+      <span class="badge"><span class="badge-dot">●</span> 4.9/5</span>
+      <span class="badge"><span class="badge-dot">●</span> Artisan local Loiret</span>
+    </div>
+
+    <div class="footer">
+      <div class="progress">
+        <div class="bar bar-filled"></div>
+        <div class="bar bar-filled"></div>
+        <div class="bar bar-filled"></div>
+        <div class="bar bar-filled"></div>
+      </div>
+      <div class="logo">
+        <div class="logo-square">AM</div>
+        <span class="logo-text">COUVERTURE</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

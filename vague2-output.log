@@ -1,0 +1,143 @@
+[dotenv@17.3.1] injecting env (13) from .env.local -- tip: ⚙️  write to custom object with { processEnv: myObject }
+🚀 Meta Ads Setup — AM Couverture — Vague 2 Printemps 2026
+=============================================================
+
+📁 Vérification des fichiers images...
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C1\Slide1.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C1\Slide2.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C1\Slide3.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C2\pub6-slide1-v2.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C2\pub6-slide2-v2.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C2\pub6-slide3-v2.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C2\pub6-slide4-v2.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C3\C3-bouclier--offre-printemps.jpg
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C4\pub8-slide1-avant.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C4\pub8-slide2-encours.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C4\pub8-slide3-apres.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C4\pub8-slide4-cta.png
+  ✅ ad-creatives\META ADS\CAMPAGNE 2\C5\c5-reno-offre-printemps.jpg
+
+  ✅ 13 fichiers images trouvés
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📌 CAMPAGNE 1 — TOF Prospection Printemps
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  🔄 Création de la campagne...
+  ✅ Campagne créée: 120244232833520572
+
+  🔄 Création de l'ad set "Loiret Large — Printemps"...
+  ✅ Ad Set créé: 120244232835180572
+
+  🔄 C1 — Le Printemps des Toitures (CAROUSEL)...
+    📤 Upload Slide1.png...
+    ✅ Hash: dc9a72a67b8155e23fcae72581698553
+    📤 Upload Slide2.png...
+    ✅ Hash: 0c833b257607d8a239e254531afccde4
+    📤 Upload Slide3.png...
+    ✅ Hash: 53af7fd7e469a01f4637548fbfe0458c
+    🎨 Création du creative...
+    ✅ Creative: 26346366831670360
+    📢 Création de l'ad...
+    ✅ Ad: 120244232845700572
+  ✅ C1 terminé
+
+  🔄 C2 — Rénovation Clé en Main (CAROUSEL)...
+    📤 Upload pub6-slide1-v2.png...
+    ✅ Hash: 17d33dc4dedc467185ac365d1d6c186e
+    📤 Upload pub6-slide2-v2.png...
+    ✅ Hash: b99c6f4a6fa870c8ea8d75f865fc294a
+    📤 Upload pub6-slide3-v2.png...
+    ✅ Hash: 5dff732792da9ef89ea64d5dc744f4fd
+    📤 Upload pub6-slide4-v2.png...
+    ✅ Hash: b2dfa12cc6340278ed2fe46f194f9f8f
+    🎨 Création du creative...
+    ✅ Creative: 1815328012473652
+    📢 Création de l'ad...
+    ✅ Ad: 120244232857430572
+  ✅ C2 terminé
+
+  🔄 C3 — Bouclier Hydrofuge (IMAGE)...
+    📤 Upload C3-bouclier--offre-printemps.jpg...
+    ✅ Hash: b4e06d798de3bfe2000c48f45b2b512b
+    🎨 Création du creative...
+    ✅ Creative: 919277807666471
+    📢 Création de l'ad...
+    ✅ Ad: 120244232862650572
+  ✅ C3 terminé
+
+  🔄 C4 — Elle a Repris 10 Ans de Vie (CAROUSEL)...
+    📤 Upload pub8-slide1-avant.png...
+    ✅ Hash: 8f653365d194303d93e9db10390ce1cd
+    📤 Upload pub8-slide2-encours.png...
+    ✅ Hash: 7ac6fb57c6116d4108066d043014ca92
+    📤 Upload pub8-slide3-apres.png...
+    ✅ Hash: 2c449be6fd5d0d62658e95e135ed6183
+    📤 Upload pub8-slide4-cta.png...
+    ✅ Hash: 99d45325c7e357a4275fefd1b08b6d65
+    🎨 Création du creative...
+    ✅ Creative: 1926532484920582
+    📢 Création de l'ad...
+    ✅ Ad: 120244232872200572
+  ✅ C4 terminé
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📌 CAMPAGNE 2 — BOF Retargeting Offre Printemps
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  🔍 Recherche custom audience existante...
+  ✅ Audience trouvée: Visiteurs site web 14j (120244225273790572)
+  🔄 Création de la campagne...
+  ✅ Campagne créée: 120244232873560572
+
+  🔄 Création de l'ad set "Visiteurs LP 14 jours"...
+  ✅ Ad Set créé: 120244232874800572
+
+  🔄 C5 — Offre Printemps — Dernière Chance (IMAGE)...
+    📤 Upload c5-reno-offre-printemps.jpg...
+    ✅ Hash: 673d19c7480449b779d7dff0421aef0f
+    🎨 Création du creative...
+    ✅ Creative: 961722859734565
+    📢 Création de l'ad...
+    ✅ Ad: 120244232878360572
+  ✅ C5 terminé
+
+
+=============================================================
+📊 RAPPORT FINAL — Vague 2 Printemps 2026
+=============================================================
+
+Campaign 1 (TOF):  120244232833520572
+Ad Set 1:          120244232835180572
+Campaign 2 (BOF):  120244232873560572
+Ad Set 2:          120244232874800572
+Custom Audience:   120244225273790572
+
+┌─────────┬──────┬─────────────────────────────────────┬───────────────┬────────────────────┬─────────────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────────────────────┬─────────────┐
+│ (index) │ pub  │ nom                                 │ format        │ lp                 │ utm_content                 │ url_complete                                                                                                                                           │ ad_id                │ status      │
+├─────────┼──────┼─────────────────────────────────────┼───────────────┼────────────────────┼─────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────┼─────────────┤
+│ 0       │ 'C1' │ 'Le Printemps des Toitures'         │ 'Carrousel 3' │ '/promo-printemps' │ 'c1-promo-printemps'        │ 'https://www.am-couverture.net/promo-printemps?utm_source=facebook&utm_medium=cpc&utm_campaign=demoussage-printemps&utm_content=c1-promo-printemps'    │ '120244232845700572' │ '✅ PAUSED' │
+│ 1       │ 'C2' │ 'Rénovation Clé en Main'            │ 'Carrousel 4' │ '/renovation'      │ 'c2-renovation-cle-en-main' │ 'https://www.am-couverture.net/renovation?utm_source=facebook&utm_medium=cpc&utm_campaign=renovation-printemps&utm_content=c2-renovation-cle-en-main'  │ '120244232857430572' │ '✅ PAUSED' │
+│ 2       │ 'C3' │ 'Bouclier Hydrofuge'                │ 'Image'       │ '/promo-printemps' │ 'c3-bouclier-hydrofuge'     │ 'https://www.am-couverture.net/promo-printemps?utm_source=facebook&utm_medium=cpc&utm_campaign=demoussage-printemps&utm_content=c3-bouclier-hydrofuge' │ '120244232862650572' │ '✅ PAUSED' │
+│ 3       │ 'C4' │ 'Elle a Repris 10 Ans de Vie'       │ 'Carrousel 4' │ '/renovation'      │ 'c4-reprend-vie'            │ 'https://www.am-couverture.net/renovation?utm_source=facebook&utm_medium=cpc&utm_campaign=renovation-printemps&utm_content=c4-reprend-vie'             │ '120244232872200572' │ '✅ PAUSED' │
+│ 4       │ 'C5' │ 'Offre Printemps — Dernière Chance' │ 'Image'       │ '/promo-printemps' │ 'c5-urgence'                │ 'https://www.am-couverture.net/promo-printemps?utm_source=facebook&utm_medium=cpc&utm_campaign=retargeting-promo&utm_content=c5-urgence'               │ '120244232878360572' │ '✅ PAUSED' │
+└─────────┴──────┴─────────────────────────────────────┴───────────────┴────────────────────┴─────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────────────────┴─────────────┘
+
+✅ 5 pubs créées avec succès
+
+╔══════════════════════════════════════════════════════════════════╗
+║  ⚠️  VÉRIFICATION MANUELLE UTM OBLIGATOIRE AVANT ACTIVATION     ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Dans Meta Ads Manager, pour CHAQUE pub :                        ║
+║  1. Cliquer sur "Prévisualiser"                                   ║
+║  2. Cliquer sur le lien de la pub                                 ║
+║  3. Vérifier que l'URL contient bien :                            ║
+║     utm_source=facebook                                           ║
+║     utm_medium=cpc                                                ║
+║     utm_campaign=[nom correct]                                    ║
+║     utm_content=[c1/c2/c3/c4/c5]                                  ║
+║  4. Vérifier que la LP cible est bien la bonne                    ║
+║  5. NE PAS ACTIVER avant confirmation visuelle de toutes les UTM  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+⚠️  Tout est en PAUSED — Activez manuellement dans Meta Ads Manager après vérification UTM.
