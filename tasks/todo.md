@@ -255,3 +255,77 @@ Images utilisées :
 - [ ] Vérifier : toutes les URLs avec UTM sont correctes
 - [ ] Vérifier : les chemins d'images sont corrects
 - [ ] Vérifier : advantage_plus_creative est configuré avec try/catch non-bloquant
+
+---
+
+## Phase 5 : Landing Pages Promo Hydrofuge + Façade ✅
+
+### Contexte
+Duplication de /promo-printemps (démoussage 11€/m²) pour 2 nouvelles prestations :
+- /promo-hydrofuge (hydrofuge toiture 13€/m²)
+- /promo-facade (hydrofuge façade 9€/m²)
+Deadline commune : 10 mai 2026. Même image hero.
+
+### Tâches
+
+#### Phase 1 : Composants partagés (retro-compatible) ✅
+- [x] `lib/types.ts` — Ajout `stats?` au type hero (+1 ligne)
+- [x] `components/HeroSection.tsx` — Stats dynamiques avec fallback DEFAULT_STATS
+- [x] `components/PromoOfferTable.tsx` — Props `offers?`, `heading?`, `oldPrice?` optionnels
+- [x] `components/PlayTheTapeForward.tsx` — Props `content?`, `sectionTitle?` optionnels
+- [x] `components/PainSection.tsx` — +2 variants "hydrofuge" et "facade"
+- [x] `components/Testimonials.tsx` — +2 variants "hydrofuge" et "facade" (3 témoignages chacun)
+- [x] Build OK après chaque modification — /promo-printemps inchangé à chaque étape
+
+#### Phase 2 : Nouvelles landing pages ✅
+- [x] `app/promo-hydrofuge/config.ts` — Config hydrofuge (meta, hero, form, services, FAQ)
+- [x] `app/promo-hydrofuge/page.tsx` — Page hydrofuge (PromoOfferTable highlight hydrofuge)
+- [x] `app/promo-facade/config.ts` — Config façade (meta, hero avec "200+ façades", form, services, FAQ)
+- [x] `app/promo-facade/page.tsx` — Page façade (PromoOfferTable highlight façade)
+
+#### Phase 3 : Vérification ✅
+- [x] `npm run build` → 0 erreur, 14/14 pages générées
+- [x] `git diff app/promo-printemps/` → aucun changement
+- [x] 3 URLs : /promo-printemps, /promo-hydrofuge, /promo-facade
+- [ ] Commit + push (en attente GO utilisateur)
+
+---
+
+### Review Phase 5
+
+#### Fichiers modifiés (6)
+| Fichier | Modification | Impact /promo-printemps |
+|---------|-------------|----------------------|
+| `lib/types.ts` | +1 ligne stats optionnel | Aucun |
+| `components/HeroSection.tsx` | Stats dynamiques map() | Aucun (fallback identique) |
+| `components/PromoOfferTable.tsx` | Type OfferItem + props optionnels | Aucun (fallback DEFAULT_OFFERS) |
+| `components/PlayTheTapeForward.tsx` | Props content/sectionTitle | Aucun (fallback CONTENT[variant]) |
+| `components/PainSection.tsx` | +2 variants hydrofuge/facade | Aucun (variant demoussage inchangé) |
+| `components/Testimonials.tsx` | +2 variants hydrofuge/facade | Aucun (variant demoussage inchangé) |
+
+#### Fichiers créés (4)
+- `app/promo-hydrofuge/config.ts` + `page.tsx`
+- `app/promo-facade/config.ts` + `page.tsx`
+
+#### Approche technique
+- Tous les props ajoutés aux composants partagés sont **optionnels avec fallback**
+- /promo-printemps ne passe aucun des nouveaux props → comportement 100% identique
+- Aucune modification du formulaire, footer, badges trust, image hero
+
+#### Convention UTM
+- Clés dynamicH1 sans préfixe campagne : `promo-hydrofuge`, `promo-facade`
+- Valeur utm_content dans Meta Ads Manager doit matcher exactement ces clés
+
+#### Différences clés entre les 3 LPs
+| | /promo-printemps | /promo-hydrofuge | /promo-facade |
+|---|---|---|---|
+| Offre highlight | Hydrofuge 13€ (par défaut) | Hydrofuge 13€ + oldPrice 25€ | Façade 9€ + oldPrice 25€ |
+| PainSection | demoussage | hydrofuge | facade |
+| Testimonials | demoussage | hydrofuge | facade |
+| Stats hero | Défaut (toitures) | Défaut (toitures) | Custom (façades) |
+| FAQ | 5 questions démoussage | 4 questions hydrofuge | 4 questions façade |
+
+#### À faire après validation
+- Commit + push → auto-deploy Vercel
+- Configurer les campagnes Meta Ads avec utm_content=promo-hydrofuge / promo-facade
+- Tester visuellement les 3 LPs en local et en preview Vercel

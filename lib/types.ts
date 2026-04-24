@@ -10,6 +10,7 @@ export type LandingPageConfig = {
     subtitle: string;
     backgroundImage: string;
     dynamicH1?: Record<string, string>;
+    stats?: Array<{ text: string; color: "blue" | "green" | "orange" }>;
   };
   trustBadges: Array<{
     icon: string;

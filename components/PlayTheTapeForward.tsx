@@ -60,18 +60,22 @@ export function PlayTheTapeForward({
   variant,
   ctaText = "Demander mon devis gratuit",
   urgencyText,
+  sectionTitle,
+  content,
 }: {
   variant: Variant;
   ctaText?: string;
   urgencyText?: string;
+  sectionTitle?: string;
+  content?: { actTitle: string; actPoints: string[]; waitTitle: string; waitPoints: string[] };
 }) {
-  const c = CONTENT[variant];
+  const c = content ?? CONTENT[variant];
 
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-10">
-          Deux futurs possibles pour votre toiture
+          {sectionTitle ?? "Deux futurs possibles pour votre toiture"}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-10">

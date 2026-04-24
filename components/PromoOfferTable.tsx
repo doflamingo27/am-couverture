@@ -1,6 +1,15 @@
 import { CheckCircle, Star } from "lucide-react";
 
-const OFFERS = [
+type OfferItem = {
+  title: string;
+  price: string;
+  oldPrice?: string;
+  highlight: boolean;
+  badge?: string;
+  points: string[];
+};
+
+const DEFAULT_OFFERS: OfferItem[] = [
   {
     title: "Démoussage toiture",
     price: "11",
@@ -35,13 +44,19 @@ const OFFERS = [
       "Résultat garanti",
     ],
   },
-] as const;
+];
 
 export function PromoOfferTable({
   deadline = "10 mai",
+  heading,
+  offers,
 }: {
   deadline?: string;
+  heading?: string;
+  offers?: OfferItem[];
 }) {
+  const items = offers ?? DEFAULT_OFFERS;
+
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
@@ -53,12 +68,12 @@ export function PromoOfferTable({
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-10">
-          Nos tarifs printemps
+          {heading ?? "Nos tarifs printemps"}
         </h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8">
-          {OFFERS.map((offer, i) => (
+        <div className={`grid grid-cols-1 ${items.length > 1 ? "md:grid-cols-3" : "max-w-sm mx-auto"} gap-4 sm:gap-6 mb-8`}>
+          {items.map((offer, i) => (
             <div
               key={i}
               className={`relative rounded-2xl p-6 sm:p-8 border ${
@@ -67,7 +82,7 @@ export function PromoOfferTable({
                   : "bg-slate-800/60 border-slate-700/40"
               }`}
             >
-              {offer.highlight && "badge" in offer && (
+              {offer.highlight && offer.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                     <Star size={12} className="fill-white" />
@@ -80,6 +95,11 @@ export function PromoOfferTable({
                 {offer.title}
               </h3>
               <div className="flex items-baseline gap-1 mb-6">
+                {offer.oldPrice && (
+                  <span className="line-through text-slate-500 text-lg mr-1">
+                    {offer.oldPrice}€
+                  </span>
+                )}
                 <span className="text-3xl sm:text-4xl font-extrabold text-[#B8CC30]">
                   {offer.price}€
                 </span>

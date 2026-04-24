@@ -8,7 +8,9 @@ type Testimonial = {
   service?: string;
 };
 
-const TESTIMONIALS: Record<"demoussage" | "renovation", Testimonial[]> = {
+type VariantKey = "demoussage" | "renovation" | "hydrofuge" | "facade";
+
+const TESTIMONIALS: Record<VariantKey, Testimonial[]> = {
   demoussage: [
     {
       name: "Michel D.",
@@ -55,6 +57,52 @@ const TESTIMONIALS: Record<"demoussage" | "renovation", Testimonial[]> = {
       service: "Rénovation complète",
     },
   ],
+  hydrofuge: [
+    {
+      name: "Patrice M.",
+      city: "Orléans",
+      rating: 5,
+      text: "J\u2019avais fait démousser ma toiture il y a 4 ans sans hydrofuge. La mousse est revenue en 18 mois. Cette fois-ci, j\u2019ai pris le forfait avec hydrofuge Sikagard. Trois ans plus tard, pas une trace. Le surcoût vaut largement le coup.",
+      service: "Hydrofuge toiture Sikagard",
+    },
+    {
+      name: "Nathalie R.",
+      city: "Saran",
+      rating: 5,
+      text: "Mon couvreur précédent m\u2019avait dit que l\u2019hydrofuge n\u2019était pas nécessaire. Quand j\u2019ai vu l\u2019état de mes tuiles après deux hivers, j\u2019ai appelé AM Couverture. Le diagnostic était honnête, le traitement rapide, et depuis l\u2019eau perle sur mes tuiles.",
+      service: "Démoussage + Hydrofuge",
+    },
+    {
+      name: "Jean-Claude T.",
+      city: "Ingré",
+      rating: 5,
+      text: "Je suis retraité et méfiant par nature, surtout pour les travaux de toiture. J\u2019ai demandé trois devis. AM Couverture était le seul à détailler chaque poste. Travaux faits en une journée, chantier propre, et la facture correspond au centime près au devis.",
+      service: "Hydrofuge toiture",
+    },
+  ],
+  facade: [
+    {
+      name: "Sylvie K.",
+      city: "Olivet",
+      rating: 5,
+      text: "Ma façade nord était couverte de traces vertes depuis des années. Mon voisin avait payé 7\u00a0000\u00a0€ pour un ravalement. AM Couverture m\u2019a proposé un nettoyage + hydrofuge pour moins de 1\u00a0200\u00a0€. Résultat identique, ma façade est comme neuve.",
+      service: "Nettoyage + Hydrofuge façade",
+    },
+    {
+      name: "Marc D.",
+      city: "Fleury-les-Aubrais",
+      rating: 5,
+      text: "Le produit est complètement invisible \u2014 ma façade en crépi a gardé exactement la même teinte. Mais quand il pleut, on voit la différence\u00a0: l\u2019eau glisse au lieu de s\u2019imbiber. Plus de traces noires sous les fenêtres.",
+      service: "Hydrofuge façade",
+    },
+    {
+      name: "Françoise L.",
+      city: "Saint-Jean-de-la-Ruelle",
+      rating: 5,
+      text: "J\u2019ai repoussé pendant 3 ans parce que je croyais qu\u2019il fallait un ravalement complet. Le diagnostic d\u2019AM Couverture m\u2019a rassurée\u00a0: un simple hydrofuge suffisait. Intervention en une demi-journée, pas de nuisance, prix correct.",
+      service: "Hydrofuge façade",
+    },
+  ],
 };
 
 function Stars({ rating }: { rating: number }) {
@@ -79,7 +127,7 @@ export function Testimonials({
   variant,
   data,
 }: {
-  variant?: "demoussage" | "renovation";
+  variant?: VariantKey;
   data?: { average: number; count: number; items: Testimonial[] };
 }) {
   const items = variant ? TESTIMONIALS[variant] : data?.items || [];

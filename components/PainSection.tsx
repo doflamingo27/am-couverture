@@ -1,6 +1,17 @@
 import { AlertTriangle } from "lucide-react";
 
-const CONTENT = {
+type Variant = "demoussage" | "renovation" | "hydrofuge" | "facade";
+
+const CONTENT: Record<Variant, {
+  badge: string;
+  title: string;
+  intro: string;
+  agitateTitle: string;
+  agitatePoints: string[];
+  costLine: string;
+  solveTitle: string;
+  solveText: string;
+}> = {
   demoussage: {
     badge: "Pourquoi agir maintenant",
     title: "La mousse sur votre toiture ne gêne pas que l'esthétique.",
@@ -39,12 +50,50 @@ const CONTENT = {
     solveText:
       "Nouvelles tuiles, charpente vérifiée et traitée, isolation renforcée, zinguerie neuve. Un seul chantier, un seul interlocuteur, une garantie décennale.",
   },
-} as const;
+  hydrofuge: {
+    badge: "Pourquoi protéger votre toiture",
+    title: "Une toiture non protégée vieillit deux fois plus vite.",
+    intro:
+      "Sans hydrofuge, vos tuiles absorbent l\u2019eau comme une éponge. L\u2019humidité s\u2019infiltre, la mousse revient, et les dégâts s\u2019accumulent saison après saison.",
+    agitateTitle: "Chaque année sans protection aggrave la situation.",
+    agitatePoints: [
+      "Les tuiles poreuses éclatent au gel\u00a0: fuites et infiltrations",
+      "La mousse se réinstalle en quelques mois sur des tuiles non traitées",
+      "L\u2019humidité atteint la charpente et provoque des dégâts structurels",
+      "La valeur immobilière de votre maison baisse de 15 à 25\u00a0%",
+    ],
+    costLine:
+      "Un hydrofuge à 13\u00a0€/m² aujourd\u2019hui évite une réfection complète à 8\u00a0000-15\u00a0000\u00a0€ dans 3 à 5 ans.",
+    solveTitle:
+      "L\u2019hydrofuge professionnel protège votre toiture pour 10 ans.",
+    solveText:
+      "Un hydrofuge Sikagard appliqué par un artisan certifié rend vos tuiles imperméables. L\u2019eau perle en surface, la mousse ne s\u2019accroche plus, et votre toiture conserve son état pendant une décennie.",
+  },
+  facade: {
+    badge: "Pourquoi protéger votre façade",
+    title: "Une façade non traitée absorbe l\u2019humidité jour après jour.",
+    intro:
+      "Les murs non protégés se gorgent d\u2019eau à chaque pluie. Résultat\u00a0: mousses, fissures, et une isolation qui se dégrade en silence.",
+    agitateTitle: "Chaque saison sans protection aggrave la situation.",
+    agitatePoints: [
+      "L\u2019humidité pénètre les murs et dégrade l\u2019isolation thermique",
+      "Les mousses et algues noircissent la façade\u00a0: aspect négligé",
+      "Les fissures s\u2019agrandissent sous l\u2019effet du gel et de l\u2019humidité",
+      "Un ravalement complet peut dépasser 8\u00a0000\u00a0€ si on attend trop",
+    ],
+    costLine:
+      "Un hydrofuge façade à 9\u00a0€/m² aujourd\u2019hui évite un ravalement complet à 8\u00a0000\u00a0€+ dans quelques années.",
+    solveTitle:
+      "L\u2019hydrofuge façade protège vos murs pour 10 ans.",
+    solveText:
+      "Un hydrofuge professionnel invisible rend votre façade imperméable sans modifier son aspect. L\u2019eau ruisselle au lieu de pénétrer, les mousses ne reviennent plus, et vos murs restent sains pendant une décennie.",
+  },
+};
 
 export function PainSection({
   variant,
 }: {
-  variant: "demoussage" | "renovation";
+  variant: Variant;
 }) {
   const c = CONTENT[variant];
 
