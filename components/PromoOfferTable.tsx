@@ -38,7 +38,7 @@ const OFFERS = [
 ] as const;
 
 export function PromoOfferTable({
-  deadline = "21 avril",
+  deadline = "10 mai",
 }: {
   deadline?: string;
 }) {

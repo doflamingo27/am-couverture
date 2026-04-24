@@ -17,7 +17,7 @@ const HEADLINES: Record<Variant, { headline: string; subline: string }> = {
       "Demandez votre devis personnalisé — un seul artisan du début à la fin.",
   },
   promo: {
-    headline: "Il reste des créneaux disponibles avant le 21 avril.",
+    headline: "Il reste des créneaux disponibles avant le 10 mai.",
     subline:
       "Profitez des tarifs printemps — devis gratuit et sans engagement.",
   },

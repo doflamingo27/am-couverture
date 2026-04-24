@@ -11,10 +11,10 @@ export const config: LandingPageConfig = {
     badge: "OFFRE PRINTEMPS — PLACES LIMITÉES",
     title: "Offre Printemps — Toiture propre et protégée à partir de 11€/m²",
     subtitle:
-      "Profitez des tarifs préférentiels jusqu'au 21 avril. Démoussage professionnel, artisan local certifié. Devis gratuit en 24h.",
+      "Profitez des tarifs préférentiels jusqu'au 10 mai. Démoussage professionnel, artisan local certifié. Devis gratuit en 24h.",
     backgroundImage: "/images/roofcleaning1.jpg",
     dynamicH1: {
-      "c1-promo-printemps": "Offre printemps — Démoussage à 11€/m² jusqu'au 21 avril",
+      "c1-promo-printemps": "Offre printemps — Démoussage à 11€/m² jusqu'au 10 mai",
     },
   },
   trustBadges: [
@@ -105,7 +105,7 @@ export const config: LandingPageConfig = {
     {
       question: "L'offre printemps est-elle vraiment limitée ?",
       answer:
-        "Oui. Les tarifs à 11€/m² sont valables jusqu'au 21 avril uniquement, dans la limite des créneaux disponibles. Au-delà, les tarifs normaux s'appliquent.",
+        "Oui. Les tarifs à 11€/m² sont valables jusqu'au 10 mai uniquement, dans la limite des créneaux disponibles. Au-delà, les tarifs normaux s'appliquent.",
     },
     {
       question: "Combien de temps durent les travaux ?",
@@ -115,7 +115,7 @@ export const config: LandingPageConfig = {
   ],
   ctaFinal: {
     title: "Profitez de l'offre printemps",
-    subtitle: "Tarifs préférentiels jusqu'au 21 avril — Places limitées",
+    subtitle: "Tarifs préférentiels jusqu'au 10 mai — Places limitées",
     ctaText: "Réserver mon créneau",
     reassurance: "Rappel sous 2h • Sans engagement • Tarifs garantis",
   },

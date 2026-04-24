@@ -39,14 +39,14 @@ const CONTENT: Record<
     ],
   },
   promo: {
-    actTitle: "Si vous agissez avant le 21 avril",
+    actTitle: "Si vous agissez avant le 10 mai",
     actPoints: [
       "Tarifs printemps garantis (à partir de 11\u00a0€/m²)",
       "Créneau d'intervention rapide",
       "Toiture protégée avant l'été",
       "Devis gratuit et sans engagement",
     ],
-    waitTitle: "Si vous attendez après le 21 avril",
+    waitTitle: "Si vous attendez après le 10 mai",
     waitPoints: [
       "L'offre printemps expire — retour aux tarifs normaux",
       "Créneaux d'intervention plus espacés",

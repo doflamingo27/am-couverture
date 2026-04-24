@@ -25,7 +25,7 @@ export default function Page() {
       <HeroSection hero={config.hero} />
       <TrustBadges badges={config.trustBadges} />
       <LeadForm form={config.form} />
-      <PromoOfferTable deadline="21 avril" />
+      <PromoOfferTable deadline="10 mai" />
       <PainSection variant="demoussage" />
       <BeforeAfter items={config.beforeAfter} />
       <Testimonials variant="demoussage" />
@@ -35,12 +35,12 @@ export default function Page() {
       />
       <PlayTheTapeForward
         variant="promo"
-        urgencyText="Offre valable jusqu'au 21 avril — Places limitées"
+        urgencyText="Offre valable jusqu'au 10 mai — Places limitées"
       />
       <FAQ items={config.faq} />
       <CloserSection
         variant="promo"
-        headline="Il reste des créneaux disponibles avant le 21 avril."
+        headline="Il reste des créneaux disponibles avant le 10 mai."
         ctaText="Réserver mon créneau maintenant"
         form={config.form}
       />

@@ -13,7 +13,7 @@ export const config: LandingPageConfig = {
       "Démoussage professionnel par un artisan local certifié, assurance décennale. Devis gratuit sous 24h.",
     backgroundImage: "/images/roofcleaning1.jpg",
     dynamicH1: {
-      "c1-promo-printemps": "Offre printemps — Démoussage à 11€/m² jusqu'au 21 avril",
+      "c1-promo-printemps": "Offre printemps — Démoussage à 11€/m² jusqu'au 10 mai",
       "c3-agissez-printemps": "La mousse détruit votre toiture en silence — Agissez ce printemps",
       "p1-transformation": "Votre toiture retrouve son éclat — Devis gratuit en 24h",
       "p2-diagnostic": "Diagnostic toiture GRATUIT — On vous dit exactement où en est votre toit",
