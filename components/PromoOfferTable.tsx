@@ -1,4 +1,5 @@
 import { CheckCircle, Star } from "lucide-react";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 type OfferItem = {
   title: string;
@@ -59,7 +60,7 @@ export function PromoOfferTable({
 
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto">
+      <AnimateOnScroll className="max-w-5xl mx-auto">
         {/* Animated badge */}
         <div className="flex justify-center mb-8">
           <span className="inline-flex items-center gap-2 bg-red-500/15 text-red-400 text-sm font-bold px-5 py-2 rounded-full border border-red-500/30 animate-pulse">
@@ -145,7 +146,7 @@ export function PromoOfferTable({
           <span>·</span>
           <span>Décennale</span>
         </div>
-      </div>
+      </AnimateOnScroll>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, ArrowLeft, FileText, Lock } from "lucide-react";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import type { LandingPageConfig } from "@/lib/types";
 
 type FormData = {
@@ -89,6 +90,7 @@ export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: 
         </div>
 
         {/* Form card */}
+        <AnimateOnScroll>
         <div className="bg-[#1E293B] border border-slate-700/50 rounded-2xl p-5 sm:p-8 shadow-2xl animate-border-glow">
           {/* Progress bar */}
           <div className="flex items-center gap-2 mb-8">
@@ -213,6 +215,7 @@ export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: 
             </form>
           )}
         </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

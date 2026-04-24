@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 /* ── Animations CTA & Form ── */
+/* Toutes les animations sont paused par defaut.
+   Elles demarrent quand .in-view (IntersectionObserver) est present.
+   HeroSection n'utilise pas .in-view (above the fold = toujours visible). */
 
 /* Shimmer sweep — reflet lumineux qui balaie un bouton */
 @keyframes shimmer {
@@ -32,6 +35,8 @@
   100% { background-position: 200% 50%; }
 }
 
+/* ── Classes d'animation (paused par defaut) ── */
+
 /* CTA shimmer (chartreuse) */
 .animate-shimmer {
   position: relative;
@@ -51,6 +56,7 @@
   );
   background-size: 200% 100%;
   animation: shimmer 4s ease-in-out infinite;
+  animation-play-state: paused;
   pointer-events: none;
   border-radius: inherit;
 }
@@ -58,16 +64,19 @@
 /* Orange CTA shadow pulse */
 .animate-shadow-pulse {
   animation: shadow-pulse 3s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 /* Highlighted card glow */
 .animate-glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 /* Form container border glow */
 .animate-border-glow {
   animation: border-glow 4s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 /* Progress bar animated gradient */
@@ -75,4 +84,38 @@
   background: linear-gradient(90deg, #B8CC30, #d4e85a, #B8CC30);
   background-size: 200% 100%;
   animation: gradient-slide 2s linear infinite;
+  animation-play-state: paused;
+}
+
+/* ── Activation au scroll via .in-view ── */
+
+.in-view .animate-shimmer::after,
+.in-view.animate-shimmer::after {
+  animation-play-state: running;
+}
+
+.in-view .animate-shadow-pulse,
+.in-view.animate-shadow-pulse {
+  animation-play-state: running;
+}
+
+.in-view .animate-glow-pulse,
+.in-view.animate-glow-pulse {
+  animation-play-state: running;
+}
+
+.in-view .animate-border-glow,
+.in-view.animate-border-glow {
+  animation-play-state: running;
+}
+
+.in-view .animate-gradient-slide,
+.in-view.animate-gradient-slide {
+  animation-play-state: running;
+}
+
+/* ── HeroSection : toujours actif (above the fold) ── */
+
+.hero-always-animate .animate-shimmer::after {
+  animation-play-state: running;
 }

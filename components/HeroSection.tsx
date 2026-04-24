@@ -21,7 +21,7 @@ function DynamicH1({ title, dynamicH1 }: { title: string; dynamicH1?: Record<str
 
 export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
   return (
-    <section className="relative flex flex-col overflow-hidden">
+    <section className="hero-always-animate relative flex flex-col overflow-hidden">
       {/* Background image */}
       <Image
         src={hero.backgroundImage}

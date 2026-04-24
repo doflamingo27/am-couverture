@@ -1,4 +1,5 @@
 import { AlertTriangle } from "lucide-react";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 type Variant = "demoussage" | "renovation" | "hydrofuge" | "facade";
 
@@ -99,7 +100,7 @@ export function PainSection({
 
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6 bg-gray-50">
-      <div className="max-w-3xl mx-auto">
+      <AnimateOnScroll className="max-w-3xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6">
           <span className="inline-flex items-center gap-1.5 bg-orange-100 text-orange-700 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full border border-orange-200">
@@ -165,7 +166,7 @@ export function PainSection({
             Rappel sous 2h · Sans engagement · 100% gratuit
           </p>
         </div>
-      </div>
+      </AnimateOnScroll>
     </section>
   );
 }
