@@ -89,14 +89,14 @@ export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: 
         </div>
 
         {/* Form card */}
-        <div className="bg-[#1E293B] border border-slate-700/50 rounded-2xl p-5 sm:p-8 shadow-2xl">
+        <div className="bg-[#1E293B] border border-slate-700/50 rounded-2xl p-5 sm:p-8 shadow-2xl animate-border-glow">
           {/* Progress bar */}
           <div className="flex items-center gap-2 mb-8">
             {[1, 2, 3].map((s) => (
               <div key={s} className="flex-1 flex flex-col gap-1.5">
                 <div
                   className={`h-1.5 rounded-full transition-all duration-500 ${
-                    s <= step ? "bg-[#B8CC30]" : "bg-slate-600/50"
+                    s <= step ? "animate-gradient-slide" : "bg-slate-600/50"
                   }`}
                 />
               </div>
@@ -115,7 +115,7 @@ export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: 
                   <button
                     key={opt.value}
                     onClick={() => selectOption("projectType", opt.value)}
-                    className="w-full text-left px-5 py-4 rounded-xl border border-slate-600/50 bg-slate-800/50 hover:border-[#B8CC30] hover:bg-[#B8CC30]/10 transition-all duration-200 font-medium text-sm sm:text-base"
+                    className="w-full text-left px-5 py-4 rounded-xl border border-slate-600/50 bg-slate-800/50 hover:border-[#B8CC30] hover:bg-[#B8CC30]/10 hover:scale-[1.02] transition-all duration-200 font-medium text-sm sm:text-base"
                   >
                     {opt.label}
                   </button>
@@ -140,7 +140,7 @@ export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: 
                   <button
                     key={opt.value}
                     onClick={() => selectOption("propertyType", opt.value)}
-                    className="w-full text-left px-5 py-4 rounded-xl border border-slate-600/50 bg-slate-800/50 hover:border-[#B8CC30] hover:bg-[#B8CC30]/10 transition-all duration-200 font-medium text-sm sm:text-base"
+                    className="w-full text-left px-5 py-4 rounded-xl border border-slate-600/50 bg-slate-800/50 hover:border-[#B8CC30] hover:bg-[#B8CC30]/10 hover:scale-[1.02] transition-all duration-200 font-medium text-sm sm:text-base"
                   >
                     {opt.label}
                   </button>
@@ -201,7 +201,7 @@ export function LeadForm({ form, id = "formulaire", sectionClassName }: { form: 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-6 flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold py-4 rounded-full text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.25)] transition-all duration-300 disabled:opacity-50"
+                className="animate-shimmer w-full mt-6 flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold py-4 rounded-full text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.25)] transition-all duration-300 disabled:opacity-50"
               >
                 <Send size={18} />
                 {loading ? "Envoi en cours..." : form.submitText}

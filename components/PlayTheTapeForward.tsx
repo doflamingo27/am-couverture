@@ -137,7 +137,7 @@ export function PlayTheTapeForward({
           )}
           <a
             href="#formulaire"
-            className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-colors duration-200"
+            className="animate-shadow-pulse inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-colors duration-200"
           >
             {ctaText}
             <ArrowRight size={18} />

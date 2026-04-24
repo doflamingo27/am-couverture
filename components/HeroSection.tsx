@@ -100,7 +100,7 @@ export function HeroSection({ hero }: { hero: LandingPageConfig["hero"] }) {
                 .getElementById("formulaire")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="group flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.3)] transition-all duration-300"
+            className="animate-shimmer group flex items-center justify-center gap-2 bg-[#B8CC30] text-black font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-lg hover:bg-[#c8dc40] hover:shadow-[0_0_30px_rgba(184,204,48,0.3)] transition-all duration-300"
           >
             Demander un devis
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:hidden" />

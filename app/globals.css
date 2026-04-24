@@ -1,1 +1,78 @@
 @import "tailwindcss";
+
+/* ── Animations CTA & Form ── */
+
+/* Shimmer sweep — reflet lumineux qui balaie un bouton */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Glow pulse — halo qui pulse doucement */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(249, 115, 22, 0.15); }
+  50% { box-shadow: 0 0 24px rgba(249, 115, 22, 0.35), 0 0 48px rgba(249, 115, 22, 0.1); }
+}
+
+/* Shadow pulse — ombre orange qui s'etend/retracte */
+@keyframes shadow-pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(249, 115, 22, 0.2); }
+  50% { box-shadow: 0 4px 32px rgba(249, 115, 22, 0.45), 0 0 12px rgba(249, 115, 22, 0.15); }
+}
+
+/* Border glow — bordure qui pulse */
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(184, 204, 48, 0.15); box-shadow: 0 0 0 rgba(184, 204, 48, 0); }
+  50% { border-color: rgba(184, 204, 48, 0.4); box-shadow: 0 0 20px rgba(184, 204, 48, 0.08); }
+}
+
+/* Progress bar gradient slide */
+@keyframes gradient-slide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* CTA shimmer (chartreuse) */
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.18) 55%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Orange CTA shadow pulse */
+.animate-shadow-pulse {
+  animation: shadow-pulse 3s ease-in-out infinite;
+}
+
+/* Highlighted card glow */
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Form container border glow */
+.animate-border-glow {
+  animation: border-glow 4s ease-in-out infinite;
+}
+
+/* Progress bar animated gradient */
+.animate-gradient-slide {
+  background: linear-gradient(90deg, #B8CC30, #d4e85a, #B8CC30);
+  background-size: 200% 100%;
+  animation: gradient-slide 2s linear infinite;
+}

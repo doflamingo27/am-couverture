@@ -76,9 +76,9 @@ export function PromoOfferTable({
           {items.map((offer, i) => (
             <div
               key={i}
-              className={`relative rounded-2xl p-6 sm:p-8 border ${
+              className={`relative rounded-2xl p-6 sm:p-8 border transition-transform duration-300 hover:scale-[1.03] ${
                 offer.highlight
-                  ? "bg-orange-500/10 border-orange-500/40 ring-1 ring-orange-500/20"
+                  ? "bg-orange-500/10 border-orange-500/40 ring-1 ring-orange-500/20 animate-glow-pulse"
                   : "bg-slate-800/60 border-slate-700/40"
               }`}
             >
