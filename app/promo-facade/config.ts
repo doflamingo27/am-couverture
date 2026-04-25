@@ -12,7 +12,7 @@ export const config: LandingPageConfig = {
     title: "Offre Printemps — Façade protégée 10 ans à partir de 9€/m²",
     subtitle:
       "Profitez des tarifs préférentiels jusqu'au 10 mai. Hydrofuge façade professionnel, stop infiltrations et mousses, artisan local certifié. Devis gratuit en 24h.",
-    backgroundImage: "/images/roofcleaning1.jpg",
+    backgroundImage: "/images/promo-facade-hero.jpg",
     dynamicH1: {
       "promo-facade": "Offre printemps — Hydrofuge façade à 9€/m² jusqu'au 10 mai",
     },
