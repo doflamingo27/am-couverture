@@ -74,8 +74,8 @@ export const config: LandingPageConfig = {
   },
   beforeAfter: [
     {
-      before: "/images/demoussage-avant-1.jpg",
-      after: "/images/demoussage-apres-1.jpg",
+      before: "/images/promo-facade-avant-1.jpg",
+      after: "/images/promo-facade-apres-1.jpg",
       caption: "Maison à Orléans — Hydrofuge façade crépi",
     },
     {
